@@ -1,0 +1,4 @@
+medicina_inasistencias:
+    resource: "@MedicinaInasistenciasBundle/Resources/config/routing.yml"
+    prefix:   /
+

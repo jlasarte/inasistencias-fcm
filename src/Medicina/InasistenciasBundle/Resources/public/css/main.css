@@ -1,0 +1,20 @@
+body{margin:0;padding:0; font-family: Arial, sans-serif; background-color: #EAEAEA;}
+h1,h2,h3,h4,h5,h6{margin:0;}
+
+.aspage{margin: 0 auto; width: 960px;}
+#head{background: #860229; color:#fff;}
+#head .aspage{height: 80px; text-align: right; background: url('../images/brand.png') no-repeat left center;}
+#head .aspage h1{font-size: 18px; padding-top: 22px;}
+#head .aspage h2{font-size: 14px; font-weight: normal;}
+#page{}
+#page #nav{background: #bbb; display: block; margin: 0;padding: 0; margin-bottom: 10px;}
+#page #nav li{ padding: 6px 0 8px 0; list-style: none; display: inline-block;}
+#page #nav li a{padding: 10px 10px 8px 10px; text-decoration: none; font-size: 12px; color: #000; transition: 0.25s ease;}
+#page #nav li a:focus, #page #nav li a:hover{background-color: #888; color: #fff; cursor: pointer;}
+#page #body{padding: 10px; min-height: 500px; background: #fcfcfc;}
+#page #foot{height: 40px; border-top: 1px solid #dedede;}
+#page #foot p{font-size: 12px; text-align: center; font-size: 12px; color:#555;}
+
+@media print{
+	body{background-color: transparent;}
+}

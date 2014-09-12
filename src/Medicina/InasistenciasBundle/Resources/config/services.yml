@@ -1,0 +1,7 @@
+parameters:
+#    medicina_inasistencias.example.class: Medicina\InasistenciasBundle\Example
+
+services:
+#    medicina_inasistencias.example:
+#        class: %medicina_inasistencias.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

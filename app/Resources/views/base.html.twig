@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>{% block title %} - Registro de Inasistencias de la Facultad de Medicina - UNLP{% endblock %}</title>
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+		{% stylesheets filter='cssrewrite' 'bundles/medicinainasistencias/css/*' %}
+		<link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+		{% endstylesheets %}
+		{% block stylesheets %}
+		{% endblock %}
+		{% block javascripts %}
+		{% endblock %}
+	</head>
+	<body>
+		<div id="head">
+			<div class="aspage">
+				<h1>Facultad de Ciencias Médicas</h1>
+				<h2>Sistema de registro de inasistencias de personal no docente</h2>
+			</div>
+		</div>
+		<div id="page" class="aspage">
+			<ul id="nav">
+				<li><a href="#">Inasistencias</a></li>
+				<li><a href="#">Compensatorios</a></li>
+				<li><a href="#">Empleados</a></li>
+				<li><a href="#">Oficinas</a></li>
+				<li><a href="#">Usuarios</a></li>
+			</ul>
+			<div id="body">
+				{% block body %}
+				{% endblock %}
+			</div>
+			<div id="foot">
+				<p>Grupo 2 - Taller de tecnologías de Producción de Software - 2014</p>
+			</div>
+		</div>
+
+	</body>
+</html>

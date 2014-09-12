@@ -1,0 +1,19 @@
+medicina_inasistencias_acceso_ingresar:
+  pattern:  /acceso/ingresar
+  defaults: { _controller: MedicinaInasistenciasBundle:Acceso:ingresar }
+
+medicina_inasistencias_acceso_default:
+  pattern:  /acceso
+  defaults: { _controller: MedicinaInasistenciasBundle:Acceso:ingresar }
+
+medicina_inasistencias_persona_inicio:
+  pattern:  /persona
+  defaults: { _controller: MedicinaInasistenciasBundle:Persona:catalogo }
+
+medicina_inasistencias_persona_default:
+  pattern:  /persona
+  defaults: { _controller: MedicinaInasistenciasBundle:Persona:catalogo }
+  
+medicina_inasistencias_default:
+  pattern:  /
+  defaults: { _controller: MedicinaInasistenciasBundle:Acceso:ingresar }
