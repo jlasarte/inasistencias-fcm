@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'G:/unlp_med_inasistencias/app/config/routing_dev.yml'
+    resource: /var/www/html/inasistencias-fcm/app/config/routing_dev.yml
