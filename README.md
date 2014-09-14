@@ -105,7 +105,7 @@ En ubuntu 14 es /etc/apache2/sites-available/000-default.conf y uso:
             Order deny,allow
             Allow from 127.0.0.1
             Require all granted
-   </Directory>
+    </Directory>
 
 Pero mientras esté el AllowOverrideAll funciona bien
 
