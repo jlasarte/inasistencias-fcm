@@ -76,96 +76,43 @@ To see a real-live Symfony page in action, access the following page:
 
     web/app_dev.php/demo/hello/Fabien
 
-4) Getting started with Symfony
--------------------------------
 
-This distribution is meant to be the starting point for your Symfony
-applications, but it also contains some sample code that you can learn from
-and play with.
+Instalar Aplicación
+===================
 
-A great way to start learning Symfony is via the [Quick Tour][4], which will
-take you through all the basic features of Symfony2.
+Después de clonar el repositorio
 
-Once you're feeling good, you can move onto reading the official
-[Symfony2 book][5].
+1) Crear Base de Datos y Usuario
+--------------------------------
 
-A default bundle, `AcmeDemoBundle`, shows you Symfony2 in action. After
-playing with it, you can remove it by following these steps:
+La aplicación está configurada para usar una db de nombre medinasist, usuario medinasist y password también.
 
-  * delete the `src/Acme` directory;
+2) Eliminar Cache
+-----------------
 
-  * remove the routing entry referencing AcmeDemoBundle in `app/config/routing_dev.yml`;
+Eliminen todos los archivos en /app/cache/ para que no los bardee
 
-  * remove the AcmeDemoBundle from the registered bundles in `app/AppKernel.php`;
+3) Habilitar mod_rewrite
+------------------------
 
-  * remove the `web/bundles/acmedemo` directory;
+4) Configurar directorio virtual para la app
+--------------------------------------------
 
-  * remove the `security.providers`, `security.firewalls.login` and
-    `security.firewalls.secured_area` entries in the `security.yml` file or
-    tweak the security configuration to fit your needs.
+En ubuntu 14 es /etc/apache2/sites-available/000-default.conf y uso:
 
-What's inside?
----------------
+    <Directory "/var/www/html/inasistencias-fcm/web">
+            AllowOverride All
+            Order deny,allow
+            Allow from 127.0.0.1
+            Require all granted
+   </Directory>
 
-The Symfony Standard Edition is configured with the following defaults:
+Pero mientras esté el AllowOverrideAll funciona bien
 
-  * Twig is the only configured template engine;
+5) Importar db
 
-  * Doctrine ORM/DBAL is configured;
+creo que haciendo
 
-  * Swiftmailer is configured;
+    php app/console doctrine:schema:update --force
 
-  * Annotations for everything are enabled.
-
-It comes pre-configured with the following bundles:
-
-  * **FrameworkBundle** - The core Symfony framework bundle
-
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
-
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
-
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
-
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
-
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
-
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example
-    code
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  http://symfony.com/doc/2.3/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  http://symfony.com/download
-[4]:  http://symfony.com/doc/2.3/quick_tour/the_big_picture.html
-[5]:  http://symfony.com/doc/2.3/index.html
-[6]:  http://symfony.com/doc/2.3/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/2.3/book/doctrine.html
-[8]:  http://symfony.com/doc/2.3/book/templating.html
-[9]:  http://symfony.com/doc/2.3/book/security.html
-[10]: http://symfony.com/doc/2.3/cookbook/email.html
-[11]: http://symfony.com/doc/2.3/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/2.3/cookbook/assetic/asset_management.html
-[13]: http://symfony.com/doc/2.3/bundles/SensioGeneratorBundle/index.html
+crea las tablas para fos_user, sino está el medinasist.sql en el directorio raiz.
