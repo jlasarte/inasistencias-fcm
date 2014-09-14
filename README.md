@@ -110,6 +110,7 @@ En ubuntu 14 es /etc/apache2/sites-available/000-default.conf y uso:
 Pero mientras esté el AllowOverrideAll funciona bien
 
 5) Importar db
+--------------
 
 creo que haciendo
 
