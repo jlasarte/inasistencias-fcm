@@ -67,3 +67,6 @@ e547a0,127.0.0.1,GET,http://localhost/fcmi/web/app_dev.php/admin/login,141086713
 036ed1,127.0.0.1,POST,http://localhost/fcmi/web/app_dev.php/admin/login_check,1410867138,
 3d772c,127.0.0.1,GET,http://localhost/fcmi/web/app_dev.php/admin/,1410867138,
 edaafd,127.0.0.1,GET,http://localhost/fcmi/web/app_dev.php/admin/dashboard,1410867139,
+598e0f,127.0.0.1,GET,http://localhost/fcmi/web/app_dev.php/admin/dashboard,1410872151,
+b6d793,127.0.0.1,GET,http://localhost/fcmi/web/app_dev.php/admin/sonata/user/user/create,1410872162,
+55a194,127.0.0.1,GET,http://localhost/fcmi/web/app_dev.php/admin/dashboard,1410872216,
