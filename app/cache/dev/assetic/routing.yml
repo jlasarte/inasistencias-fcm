@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: /var/www/html/fcmi/app/config/routing_dev.yml
+    resource: /Applications/MAMP/htdocs/fcm/app/config/routing_dev.yml
