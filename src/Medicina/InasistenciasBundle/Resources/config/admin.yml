@@ -1,0 +1,12 @@
+# Acme/DemoBundle/Resources/config/admin.yml
+services:
+    sonata.admin.post:
+        class: Medicina\InasistenciasBundle\Admin\EmployeeAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Empleado" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\Employee
+            - ~
+        calls:
+            - [ setTranslationDomain, [MedicinaInasistenciasBundle]]

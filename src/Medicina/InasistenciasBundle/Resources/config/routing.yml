@@ -1,0 +1,3 @@
+medicina_inasistencias_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MedicinaInasistenciasBundle:Default:index }

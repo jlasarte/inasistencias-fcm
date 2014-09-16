@@ -1,0 +1,35 @@
+<?php
+// src/Blogger/BlogBundle/Entity/Blog.php
+
+namespace Medicina\InasistenciasBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="employee")
+ */
+class Employee
+{
+	/**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+	protected $id;
+ 	
+ 	/**
+     * @ORM\Column(type="string")
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $last_name;
+
+    /**
+    * @ORM\Column(type="string")
+    */
+    protected $positiom;
+}
