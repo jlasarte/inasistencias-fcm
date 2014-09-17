@@ -14,13 +14,13 @@ o lo dejan por ahí tirado (como hice yo) y lo usan, por ej:
 2) Instalar las bundles
 -------------------------------------
 
-   php ~/composer.phar install
-   php app/console assets:install web
+    php ~/composer.phar install
+    php app/console assets:install web
 
 3) Limpiar la cache
 -------------------
 
-   php app/console cache:clear
+    php app/console cache:clear
 
 4) Parameters
 -----------------
@@ -31,7 +31,7 @@ en el repositorio para todos), y completenlo con sus parametros.
 5) Instalar db
 --------------
 
-   php app/console doctrine:schema:update --force
+    php app/console doctrine:schema:update --force
 
 6) Profit (?)
 ------------
