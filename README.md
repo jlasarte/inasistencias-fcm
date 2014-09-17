@@ -15,28 +15,29 @@ o lo dejan por ahí tirado (como hice yo) y lo usan, por ej:
 -------------------------------------
 
     php ~/composer.phar install
-    php app/console assets:install web
 
-3) Limpiar la cache
--------------------
+Esto:
 
-    php app/console cache:clear
+- Todas las bundles requeridas por el proyecto
+- Todos los assets (css, js) requeridas por las bundles
+- Limpia la cache
 
-4) Parameters
------------------
-
-Copiar app/config/parameters.yml.dist con el nombre app/config/parameters.yml (Si le cambian el nombre queda modificado
-en el repositorio para todos), y completenlo con sus parametros.
+Tambien les va a avisar que no existe el parameters.yml y se los va a crear. Ahí les va pidiendo los datos de la base/mail etc.
 
 ### Locale
 
 Ojo! si quieren usar locale: es tienen que instalar [php-intl](http://php.net/manual/en/intl.setup.php) en su
-máquina. 
+máquina.
 
-5) Instalar db
+3) Instalar db
 --------------
 
     php app/console doctrine:schema:update --force
 
-6) Profit (?)
-------------
+4) Crear admin
+--------------
+
+    php app/console fos:user:create adminuser --super-admin
+
+5) Profit (?)
+-------------
