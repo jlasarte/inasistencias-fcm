@@ -28,6 +28,11 @@ o lo dejan por ahí tirado (como hice yo) y lo usan, por ej:
 Copiar app/config/parameters.yml.dist con el nombre app/config/parameters.yml (Si le cambian el nombre queda modificado
 en el repositorio para todos), y completenlo con sus parametros.
 
+### Locale
+
+Ojo! si quieren usar locale: es tienen que instalar [php-intl](http://php.net/manual/en/intl.setup.php) en su
+máquina. 
+
 5) Instalar db
 --------------
 
