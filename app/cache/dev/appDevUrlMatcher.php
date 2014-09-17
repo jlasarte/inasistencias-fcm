@@ -335,8 +335,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
                 // fos_user_security_check
                 if ($pathinfo === '/login_check') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_fos_user_security_check;
+                    }
+
                     return array (  '_controller' => 'Sonata\\UserBundle\\Controller\\SecurityFOSUser1Controller::checkAction',  '_route' => 'fos_user_security_check',);
                 }
+                not_fos_user_security_check:
 
             }
 
@@ -353,8 +359,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
                 // sonata_user_security_check
                 if ($pathinfo === '/login_check') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_sonata_user_security_check;
+                    }
+
                     return array (  '_controller' => 'Sonata\\UserBundle\\Controller\\SecurityFOSUser1Controller::checkAction',  '_route' => 'sonata_user_security_check',);
                 }
+                not_sonata_user_security_check:
 
             }
 

@@ -17,7 +17,7 @@ class Employee
      * @ORM\GeneratedValue(strategy="AUTO")
      */
 	protected $id;
- 	
+
  	/**
      * @ORM\Column(type="string")
      */
@@ -31,12 +31,12 @@ class Employee
     /**
     * @ORM\Column(type="string")
     */
-    protected $positiom;
+    protected $position;
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -59,7 +59,7 @@ class Employee
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -82,7 +82,7 @@ class Employee
     /**
      * Get last_name
      *
-     * @return string 
+     * @return string
      */
     public function getLastName()
     {
@@ -95,9 +95,9 @@ class Employee
      * @param string $positiom
      * @return Employee
      */
-    public function setPositiom($positiom)
+    public function setPosition($position)
     {
-        $this->positiom = $positiom;
+        $this->position = $position;
 
         return $this;
     }
@@ -105,10 +105,10 @@ class Employee
     /**
      * Get positiom
      *
-     * @return string 
+     * @return string
      */
-    public function getPositiom()
+    public function getPosition()
     {
-        return $this->positiom;
+        return $this->position;
     }
 }

@@ -16,7 +16,7 @@ class EmployeeAdmin extends Admin
         $formMapper
             ->add('name', 'text', array('label' => 'Nombre'))
             ->add('last_name', 'text', array('label' => 'Apellido'))
-            ->add('positiom', 'text', array('label' => 'Cargo'))
+            ->add('position', 'text', array('label' => 'Cargo'))
         ;
     }
 
@@ -26,6 +26,7 @@ class EmployeeAdmin extends Admin
         $datagridMapper
             ->add('name')
             ->add('last_name')
+            ->add('position')
         ;
     }
 
@@ -35,6 +36,7 @@ class EmployeeAdmin extends Admin
         $listMapper
             ->addIdentifier('name')
             ->add('last_name')
+            ->add('position')
         ;
     }
 }

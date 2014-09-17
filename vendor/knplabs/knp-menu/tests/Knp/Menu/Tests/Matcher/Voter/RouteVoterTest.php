@@ -47,7 +47,8 @@ class RouteVoterTest extends \PHPUnit_Framework_TestCase
         $request->attributes->set('_route', 'foo');
         $request->attributes->set('_route_params', array());
 
-        $voter = new RouteVoter($request);
+        $voter = new RouteVoter();
+        $voter->setRequest($request);
 
         $voter->matchItem($item);
     }
@@ -81,7 +82,8 @@ class RouteVoterTest extends \PHPUnit_Framework_TestCase
         $request->attributes->set('_route', $route);
         $request->attributes->set('_route_params', $parameters);
 
-        $voter = new RouteVoter($request);
+        $voter = new RouteVoter();
+        $voter->setRequest($request);
 
         $this->assertSame($expected, $voter->matchItem($item));
     }

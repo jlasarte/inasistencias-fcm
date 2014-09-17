@@ -41,21 +41,26 @@ class SonataUserExtension extends Extension
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
-        if (isset($bundles['FOSRestBundle']) && isset($bundles['NelmioApiDocBundle'])) {
-            $loader->load('api_controllers.xml');
-        }
-
         if (isset($bundles['SonataAdminBundle'])) {
             $loader->load('admin.xml');
             $loader->load(sprintf('admin_%s.xml', $config['manager_type']));
         }
 
+        $loader->load(sprintf('%s.xml', $config['manager_type']));
+
+        $this->aliasManagers($container, $config['manager_type']);
+
         $loader->load('block.xml');
         $loader->load('menu.xml');
-        $loader->load('orm.xml');
         $loader->load('form.xml');
         $loader->load('google_authenticator.xml');
         $loader->load('twig.xml');
+        $loader->load('serializer.xml');
+
+        if ('orm' === $config['manager_type'] && isset($bundles['FOSRestBundle']) && isset($bundles['NelmioApiDocBundle'])) {
+            $loader->load('api_form.xml');
+            $loader->load('api_controllers.xml');
+        }
 
         if (isset($bundles['SonataSeoBundle'])) {
             $loader->load('seo_block.xml');
@@ -80,12 +85,27 @@ class SonataUserExtension extends Extension
             array('SonataUserBundle:Form:form_admin_fields.html.twig')
         ));
 
+        $container->setParameter('sonata.user.default_avatar', $config['profile']['default_avatar']);
+
         $container->setParameter('sonata.user.impersonating', $config['impersonating']);
 
         $this->configureGoogleAuthenticator($config, $container);
         $this->configureShortcut($container);
         $this->configureProfile($config, $container);
+        $this->configureRegistration($config, $container);
         $this->configureMenu($config, $container);
+    }
+
+    /**
+     * Adds aliases for user & group managers depending on $managerType
+     *
+     * @param ContainerBuilder $container
+     * @param                  $managerType
+     */
+    protected function aliasManagers(ContainerBuilder $container, $managerType)
+    {
+        $container->setAlias('sonata.user.user_manager', sprintf('sonata.user.%s.user_manager', $managerType));
+        $container->setAlias('sonata.user.group_manager', sprintf('sonata.user.%s.group_manager', $managerType));
     }
 
     /**
@@ -283,6 +303,32 @@ class SonataUserExtension extends Extension
         $container->setParameter('sonata.user.configuration.profile_blocks', $config['profile']['dashboard']['blocks']);
 
         $container->setAlias('sonata.user.profile.form.handler', $config['profile']['form']['handler']);
+    }
+
+    /**
+     * @param array            $config
+     * @param ContainerBuilder $container
+     */
+    public function configureRegistration(array $config, ContainerBuilder $container)
+    {
+        $bundles = $container->getParameter('kernel.bundles');
+
+        if (isset($bundles['MopaBootstrapBundle'])) {
+            $options = array(
+                'horizontal_input_wrapper_class' => "col-lg-8",
+                'horizontal_label_class' => "col-lg-4 control-label"
+            );
+        } else {
+            $options = array();
+        }
+
+        $container->setParameter('sonata.user.registration.form.options', $options);
+
+        $container->setParameter('sonata.user.registration.form.type', $config['profile']['register']['form']['type']);
+        $container->setParameter('sonata.user.registration.form.name', $config['profile']['register']['form']['name']);
+        $container->setParameter('sonata.user.registration.form.validation_groups', $config['profile']['register']['form']['validation_groups']);
+
+        $container->setAlias('sonata.user.registration.form.handler', $config['profile']['register']['form']['handler']);
     }
 
     /**

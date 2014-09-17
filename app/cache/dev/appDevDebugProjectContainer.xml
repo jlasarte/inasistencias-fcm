@@ -532,6 +532,13 @@
         <parameter key="cache">sonata.cache.noop</parameter>
         <parameter key="settings" type="collection"/>
       </parameter>
+      <parameter key="sonata.admin.block.search_result" type="collection">
+        <parameter key="contexts" type="collection">
+          <parameter>admin</parameter>
+        </parameter>
+        <parameter key="cache">sonata.cache.noop</parameter>
+        <parameter key="settings" type="collection"/>
+      </parameter>
       <parameter key="sonata.block.service.text" type="collection">
         <parameter key="contexts" type="collection">
           <parameter>cms</parameter>
@@ -565,6 +572,7 @@
     <parameter key="sonata_block.cache_blocks" type="collection">
       <parameter key="by_type" type="collection">
         <parameter key="sonata.admin.block.admin_list">sonata.cache.noop</parameter>
+        <parameter key="sonata.admin.block.search_result">sonata.cache.noop</parameter>
         <parameter key="sonata.block.service.text">sonata.cache.noop</parameter>
         <parameter key="sonata.block.service.rss">sonata.cache.noop</parameter>
         <parameter key="sonata.user.block.menu">sonata.cache.noop</parameter>
@@ -700,6 +708,7 @@
     <parameter key="sonata.user.admin.group.translation_domain">SonataUserBundle</parameter>
     <parameter key="sonata.user.admin.user.controller">SonataAdminBundle:CRUD</parameter>
     <parameter key="sonata.user.admin.group.controller">SonataAdminBundle:CRUD</parameter>
+    <parameter key="sonata.user.default_avatar">bundles/sonatauser/default_avatar.png</parameter>
     <parameter key="sonata.user.impersonating">false</parameter>
     <parameter key="sonata.user.google.authenticator.enabled">false</parameter>
     <parameter key="sonata.user.profile.form.type">sonata_user_profile</parameter>
@@ -718,6 +727,13 @@
         </parameter>
         <parameter key="type">sonata.block.service.text</parameter>
       </parameter>
+    </parameter>
+    <parameter key="sonata.user.registration.form.options" type="collection"/>
+    <parameter key="sonata.user.registration.form.type">sonata_user_registration</parameter>
+    <parameter key="sonata.user.registration.form.name">sonata_user_registration_form</parameter>
+    <parameter key="sonata.user.registration.form.validation_groups" type="collection">
+      <parameter>Registration</parameter>
+      <parameter>Default</parameter>
     </parameter>
     <parameter key="sonata.admin.configuration.templates" type="collection">
       <parameter key="user_block">SonataUserBundle:Admin/Core:user_block.html.twig</parameter>
@@ -2497,6 +2513,24 @@
       </call>
       <call method="addResource">
         <argument>xliff</argument>
+        <argument>/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/FOSUserBundle.en.xliff</argument>
+        <argument>en</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>xliff</argument>
+        <argument>/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/FOSUserBundle.fr.xliff</argument>
+        <argument>fr</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>xliff</argument>
+        <argument>/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/FOSUserBundle.hr.xliff</argument>
+        <argument>hr</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>xliff</argument>
         <argument>/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.bg.xliff</argument>
         <argument>bg</argument>
         <argument>SonataUserBundle</argument>
@@ -2541,6 +2575,12 @@
         <argument>xliff</argument>
         <argument>/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.fr.xliff</argument>
         <argument>fr</argument>
+        <argument>SonataUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>xliff</argument>
+        <argument>/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.hr.xliff</argument>
+        <argument>hr</argument>
         <argument>SonataUserBundle</argument>
       </call>
       <call method="addResource">
@@ -3031,6 +3071,7 @@
               <argument key="sonata_security_roles">sonata.user.form.type.security_roles</argument>
               <argument key="sonata_user_profile">sonata.user.profile.form.type</argument>
               <argument key="sonata_user_gender">sonata.user.form.gender_list</argument>
+              <argument key="sonata_user_registration">sonata.user.registration.form.type</argument>
               <argument key="sonata_type_admin">sonata.admin.form.type.admin</argument>
               <argument key="sonata_type_model">sonata.admin.form.type.model_choice</argument>
               <argument key="sonata_type_model_list">sonata.admin.form.type.model_list</argument>
@@ -3563,7 +3604,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>541887719857e</argument>
+            <argument>5419b5a18b299</argument>
           </service>
         </argument>
         <argument type="service">
@@ -3577,7 +3618,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>541887719857e</argument>
+            <argument>5419b5a18b299</argument>
           </service>
         </argument>
       </argument>
@@ -3968,7 +4009,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>541887719857e</argument>
+            <argument>5419b5a18b299</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -4071,7 +4112,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>541887719857e</argument>
+            <argument>5419b5a18b299</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -4886,7 +4927,9 @@
       <call method="add">
         <argument>sonata.admin.block.search_result</argument>
         <argument>sonata.admin.block.search_result</argument>
-        <argument type="collection"/>
+        <argument type="collection">
+          <argument>admin</argument>
+        </argument>
       </call>
     </service>
     <service id="sonata.block.context_manager.default" class="Sonata\BlockBundle\Block\BlockContextManager">
@@ -4895,6 +4938,7 @@
       <argument type="collection">
         <argument key="by_type" type="collection">
           <argument key="sonata.admin.block.admin_list">sonata.cache.noop</argument>
+          <argument key="sonata.admin.block.search_result">sonata.cache.noop</argument>
           <argument key="sonata.block.service.text">sonata.cache.noop</argument>
           <argument key="sonata.block.service.rss">sonata.cache.noop</argument>
           <argument key="sonata.user.block.menu">sonata.cache.noop</argument>
@@ -4915,6 +4959,7 @@
       <argument type="collection">
         <argument key="by_type" type="collection">
           <argument key="sonata.admin.block.admin_list">sonata.cache.noop</argument>
+          <argument key="sonata.admin.block.search_result">sonata.cache.noop</argument>
           <argument key="sonata.block.service.text">sonata.cache.noop</argument>
           <argument key="sonata.block.service.rss">sonata.cache.noop</argument>
           <argument key="sonata.user.block.menu">sonata.cache.noop</argument>
@@ -4937,6 +4982,7 @@
       <tag name="sonata.block.loader"/>
       <argument type="collection">
         <argument>sonata.admin.block.admin_list</argument>
+        <argument>sonata.admin.block.search_result</argument>
         <argument>sonata.block.service.text</argument>
         <argument>sonata.block.service.rss</argument>
         <argument>sonata.user.block.menu</argument>
@@ -5534,6 +5580,11 @@
         <argument type="service" id="sonata.admin.event.extension"/>
       </call>
     </service>
+    <service id="sonata.user.manager.user" class="Sonata\UserBundle\Entity\UserManagerProxy">
+      <argument>Sonata\UserBundle\Entity\User</argument>
+      <argument type="service" id="doctrine"/>
+      <argument type="service" id="fos_user.user_manager"/>
+    </service>
     <service id="sonata.user.block.menu" class="Sonata\UserBundle\Block\ProfileMenuBlockService">
       <tag name="sonata.block"/>
       <argument>sonata.user.block.menu</argument>
@@ -5588,8 +5639,28 @@
       <argument>getGenderList</argument>
       <argument>sonata_user_gender</argument>
     </service>
+    <service id="sonata.user.registration.form" class="Symfony\Component\Form\Form" factory-method="createNamed" factory-service="form.factory">
+      <argument>sonata_user_registration_form</argument>
+      <argument>sonata_user_registration</argument>
+      <argument>null</argument>
+      <argument type="collection">
+        <argument key="validation_groups" type="collection">
+          <argument>Registration</argument>
+          <argument>Default</argument>
+        </argument>
+      </argument>
+    </service>
+    <service id="sonata.user.registration.form.type" class="Sonata\UserBundle\Form\Type\RegistrationFormType">
+      <tag name="form.type" alias="sonata_user_registration"/>
+      <argument>Application\Sonata\UserBundle\Entity\User</argument>
+      <argument type="collection"/>
+    </service>
     <service id="sonata.user.twig.global" class="Sonata\UserBundle\Twig\GlobalVariables">
       <argument type="service" id="service_container"/>
+    </service>
+    <service id="sonata.user.serializer.handler.user" class="Sonata\UserBundle\Serializer\UserSerializerHandler">
+      <tag name="jms_serializer.subscribing_handler"/>
+      <argument type="service" id="sonata.user.manager.user"/>
     </service>
     <service id="sonata.admin.twig.extension" class="Sonata\AdminBundle\Twig\Extension\SonataAdminExtension">
       <tag name="twig.extension"/>
@@ -6405,6 +6476,13 @@
       <argument type="service" id="request"/>
       <argument type="service" id="fos_user.user_manager"/>
     </service>
+    <service id="sonata.user.registration.form.handler" class="Sonata\UserBundle\Form\Handler\RegistrationFormHandler" scope="request">
+      <argument type="service" id="sonata.user.registration.form"/>
+      <argument type="service" id="request"/>
+      <argument type="service" id="fos_user.user_manager"/>
+      <argument type="service" id="fos_user.mailer"/>
+      <argument type="service" id="fos_user.util.token_generator"/>
+    </service>
     <service id="sonata.admin.security.handler" class="Sonata\AdminBundle\Security\Handler\NoopSecurityHandler"/>
     <service id="knp_menu.menu_provider" class="Knp\Menu\Provider\ChainProvider">
       <argument type="collection">
@@ -6442,6 +6520,8 @@
     <service id="sonata.block.renderer" alias="sonata.block.renderer.default"/>
     <service id="fos_user.util.username_canonicalizer" alias="fos_user.util.email_canonicalizer"/>
     <service id="fos_user.change_password.form.handler" alias="fos_user.change_password.form.handler.default"/>
+    <service id="sonata.user.user_manager" alias="fos_user.user_manager"/>
+    <service id="sonata.user.group_manager" alias="fos_user.group_manager"/>
     <service id="sonata.user.authentication.form" alias="fos_user.profile.form"/>
     <service id="sonata.user.authentication.form_handler" alias="fos_user.profile.form.handler"/>
     <service id="sensio.distribution.webconfigurator" alias="sensio_distribution.webconfigurator"/>

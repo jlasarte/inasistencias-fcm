@@ -329,10 +329,15 @@ class appDevDebugProjectContainer extends Container
             'sonata.user.editable_role_builder' => 'getSonata_User_EditableRoleBuilderService',
             'sonata.user.form.gender_list' => 'getSonata_User_Form_GenderListService',
             'sonata.user.form.type.security_roles' => 'getSonata_User_Form_Type_SecurityRolesService',
+            'sonata.user.manager.user' => 'getSonata_User_Manager_UserService',
             'sonata.user.profile.form' => 'getSonata_User_Profile_FormService',
             'sonata.user.profile.form.handler' => 'getSonata_User_Profile_Form_HandlerService',
             'sonata.user.profile.form.type' => 'getSonata_User_Profile_Form_TypeService',
             'sonata.user.profile.menu_builder' => 'getSonata_User_Profile_MenuBuilderService',
+            'sonata.user.registration.form' => 'getSonata_User_Registration_FormService',
+            'sonata.user.registration.form.handler' => 'getSonata_User_Registration_Form_HandlerService',
+            'sonata.user.registration.form.type' => 'getSonata_User_Registration_Form_TypeService',
+            'sonata.user.serializer.handler.user' => 'getSonata_User_Serializer_Handler_UserService',
             'sonata.user.twig.global' => 'getSonata_User_Twig_GlobalService',
             'streamed_response_listener' => 'getStreamedResponseListenerService',
             'swiftmailer.email_sender.listener' => 'getSwiftmailer_EmailSender_ListenerService',
@@ -414,6 +419,8 @@ class appDevDebugProjectContainer extends Container
             'sonata.block.renderer' => 'sonata.block.renderer.default',
             'sonata.user.authentication.form' => 'fos_user.profile.form',
             'sonata.user.authentication.form_handler' => 'fos_user.profile.form.handler',
+            'sonata.user.group_manager' => 'fos_user.group_manager',
+            'sonata.user.user_manager' => 'fos_user.user_manager',
             'swiftmailer.mailer' => 'swiftmailer.mailer.default',
             'swiftmailer.plugin.messagelogger' => 'swiftmailer.mailer.default.plugin.messagelogger',
             'swiftmailer.spool' => 'swiftmailer.mailer.default.spool',
@@ -908,7 +915,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getForm_RegistryService()
     {
-        return $this->services['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('form' => 'form.type.form', 'birthday' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'collection' => 'form.type.collection', 'country' => 'form.type.country', 'date' => 'form.type.date', 'datetime' => 'form.type.datetime', 'email' => 'form.type.email', 'file' => 'form.type.file', 'hidden' => 'form.type.hidden', 'integer' => 'form.type.integer', 'language' => 'form.type.language', 'locale' => 'form.type.locale', 'money' => 'form.type.money', 'number' => 'form.type.number', 'password' => 'form.type.password', 'percent' => 'form.type.percent', 'radio' => 'form.type.radio', 'repeated' => 'form.type.repeated', 'search' => 'form.type.search', 'textarea' => 'form.type.textarea', 'text' => 'form.type.text', 'time' => 'form.type.time', 'timezone' => 'form.type.timezone', 'url' => 'form.type.url', 'button' => 'form.type.button', 'submit' => 'form.type.submit', 'reset' => 'form.type.reset', 'currency' => 'form.type.currency', 'entity' => 'form.type.entity', 'sonata_type_immutable_array' => 'sonata.core.form.type.array', 'sonata_type_boolean' => 'sonata.core.form.type.boolean', 'sonata_type_collection' => 'sonata.core.form.type.collection', 'sonata_type_translatable_choice' => 'sonata.core.form.type.translatable_choice', 'sonata_type_date_range' => 'sonata.core.form.type.date_range', 'sonata_type_datetime_range' => 'sonata.core.form.type.datetime_range', 'sonata_type_date_picker' => 'sonata.core.form.type.date_picker', 'sonata_type_datetime_picker' => 'sonata.core.form.type.datetime_picker', 'sonata_type_equal' => 'sonata.core.form.type.equal', 'sonata_block_service_choice' => 'sonata.block.form.type.block', 'sonata_type_container_template_choice' => 'sonata.block.form.type.container_template', 'fos_user_username' => 'fos_user.username_form_type', 'fos_user_profile' => 'fos_user.profile.form.type', 'fos_user_registration' => 'fos_user.registration.form.type', 'fos_user_change_password' => 'fos_user.change_password.form.type', 'fos_user_resetting' => 'fos_user.resetting.form.type', 'fos_user_group' => 'fos_user.group.form.type', 'sonata_security_roles' => 'sonata.user.form.type.security_roles', 'sonata_user_profile' => 'sonata.user.profile.form.type', 'sonata_user_gender' => 'sonata.user.form.gender_list', 'sonata_type_admin' => 'sonata.admin.form.type.admin', 'sonata_type_model' => 'sonata.admin.form.type.model_choice', 'sonata_type_model_list' => 'sonata.admin.form.type.model_list', 'sonata_type_model_reference' => 'sonata.admin.form.type.model_reference', 'sonata_type_model_hidden' => 'sonata.admin.form.type.model_hidden', 'sonata_type_model_autocomplete' => 'sonata.admin.form.type.model_autocomplete', 'sonata_type_native_collection' => 'sonata.admin.form.type.collection', 'sonata_type_filter_number' => 'sonata.admin.form.filter.type.number', 'sonata_type_filter_choice' => 'sonata.admin.form.filter.type.choice', 'sonata_type_filter_default' => 'sonata.admin.form.filter.type.default', 'sonata_type_filter_date' => 'sonata.admin.form.filter.type.date', 'sonata_type_filter_date_range' => 'sonata.admin.form.filter.type.daterange', 'sonata_type_filter_datetime' => 'sonata.admin.form.filter.type.datetime', 'sonata_type_filter_datetime_range' => 'sonata.admin.form.filter.type.datetime_range'), array('form' => array(0 => 'form.type_extension.form.http_foundation', 1 => 'form.type_extension.form.validator', 2 => 'form.type_extension.csrf', 3 => 'sonata.admin.form.extension.field', 4 => 'sonata.admin.form.extension.field.mopa'), 'repeated' => array(0 => 'form.type_extension.repeated.validator'), 'submit' => array(0 => 'form.type_extension.submit.validator')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine'))), $this->get('form.resolved_type_factory'));
+        return $this->services['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('form' => 'form.type.form', 'birthday' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'collection' => 'form.type.collection', 'country' => 'form.type.country', 'date' => 'form.type.date', 'datetime' => 'form.type.datetime', 'email' => 'form.type.email', 'file' => 'form.type.file', 'hidden' => 'form.type.hidden', 'integer' => 'form.type.integer', 'language' => 'form.type.language', 'locale' => 'form.type.locale', 'money' => 'form.type.money', 'number' => 'form.type.number', 'password' => 'form.type.password', 'percent' => 'form.type.percent', 'radio' => 'form.type.radio', 'repeated' => 'form.type.repeated', 'search' => 'form.type.search', 'textarea' => 'form.type.textarea', 'text' => 'form.type.text', 'time' => 'form.type.time', 'timezone' => 'form.type.timezone', 'url' => 'form.type.url', 'button' => 'form.type.button', 'submit' => 'form.type.submit', 'reset' => 'form.type.reset', 'currency' => 'form.type.currency', 'entity' => 'form.type.entity', 'sonata_type_immutable_array' => 'sonata.core.form.type.array', 'sonata_type_boolean' => 'sonata.core.form.type.boolean', 'sonata_type_collection' => 'sonata.core.form.type.collection', 'sonata_type_translatable_choice' => 'sonata.core.form.type.translatable_choice', 'sonata_type_date_range' => 'sonata.core.form.type.date_range', 'sonata_type_datetime_range' => 'sonata.core.form.type.datetime_range', 'sonata_type_date_picker' => 'sonata.core.form.type.date_picker', 'sonata_type_datetime_picker' => 'sonata.core.form.type.datetime_picker', 'sonata_type_equal' => 'sonata.core.form.type.equal', 'sonata_block_service_choice' => 'sonata.block.form.type.block', 'sonata_type_container_template_choice' => 'sonata.block.form.type.container_template', 'fos_user_username' => 'fos_user.username_form_type', 'fos_user_profile' => 'fos_user.profile.form.type', 'fos_user_registration' => 'fos_user.registration.form.type', 'fos_user_change_password' => 'fos_user.change_password.form.type', 'fos_user_resetting' => 'fos_user.resetting.form.type', 'fos_user_group' => 'fos_user.group.form.type', 'sonata_security_roles' => 'sonata.user.form.type.security_roles', 'sonata_user_profile' => 'sonata.user.profile.form.type', 'sonata_user_gender' => 'sonata.user.form.gender_list', 'sonata_user_registration' => 'sonata.user.registration.form.type', 'sonata_type_admin' => 'sonata.admin.form.type.admin', 'sonata_type_model' => 'sonata.admin.form.type.model_choice', 'sonata_type_model_list' => 'sonata.admin.form.type.model_list', 'sonata_type_model_reference' => 'sonata.admin.form.type.model_reference', 'sonata_type_model_hidden' => 'sonata.admin.form.type.model_hidden', 'sonata_type_model_autocomplete' => 'sonata.admin.form.type.model_autocomplete', 'sonata_type_native_collection' => 'sonata.admin.form.type.collection', 'sonata_type_filter_number' => 'sonata.admin.form.filter.type.number', 'sonata_type_filter_choice' => 'sonata.admin.form.filter.type.choice', 'sonata_type_filter_default' => 'sonata.admin.form.filter.type.default', 'sonata_type_filter_date' => 'sonata.admin.form.filter.type.date', 'sonata_type_filter_date_range' => 'sonata.admin.form.filter.type.daterange', 'sonata_type_filter_datetime' => 'sonata.admin.form.filter.type.datetime', 'sonata_type_filter_datetime_range' => 'sonata.admin.form.filter.type.datetime_range'), array('form' => array(0 => 'form.type_extension.form.http_foundation', 1 => 'form.type_extension.form.validator', 2 => 'form.type_extension.csrf', 3 => 'sonata.admin.form.extension.field', 4 => 'sonata.admin.form.extension.field.mopa'), 'repeated' => array(0 => 'form.type_extension.repeated.validator'), 'submit' => array(0 => 'form.type_extension.submit.validator')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine'))), $this->get('form.resolved_type_factory'));
     }
 
     /**
@@ -2492,7 +2499,7 @@ class appDevDebugProjectContainer extends Container
         $f = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler($a, array('login_path' => '/admin/login', 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false));
         $f->setProviderKey('admin');
 
-        return $this->services['security.firewall.map.context.admin'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => $this->get('security.context_listener.0'), 2 => $e, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $this->get('security.authentication.manager'), $this->get('security.authentication.session_strategy'), $a, 'admin', $f, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($c, $a, array('login_path' => '/admin/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $d), array('use_forward' => false, 'check_path' => '/admin/login_check', 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $d, $this->get('event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '541887719857e', $d), 5 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $a, 'admin', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($c, $a, '/admin/login', false), NULL, NULL, $d));
+        return $this->services['security.firewall.map.context.admin'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => $this->get('security.context_listener.0'), 2 => $e, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $this->get('security.authentication.manager'), $this->get('security.authentication.session_strategy'), $a, 'admin', $f, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($c, $a, array('login_path' => '/admin/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $d), array('use_forward' => false, 'check_path' => '/admin/login_check', 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $d, $this->get('event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5419b5a18b299', $d), 5 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $a, 'admin', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($c, $a, '/admin/login', false), NULL, NULL, $d));
     }
 
     /**
@@ -2529,7 +2536,7 @@ class appDevDebugProjectContainer extends Container
         $f = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler($a, array('login_path' => '/login', 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false));
         $f->setProviderKey('main');
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => $this->get('security.context_listener.0'), 2 => $e, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $this->get('security.authentication.manager'), $this->get('security.authentication.session_strategy'), $a, 'main', $f, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($c, $a, array('login_path' => '/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $d), array('use_forward' => false, 'check_path' => '/login_check', 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $d, $this->get('event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '541887719857e', $d), 5 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $a, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($c, $a, '/login', false), NULL, NULL, $d));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => $this->get('security.context_listener.0'), 2 => $e, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $this->get('security.authentication.manager'), $this->get('security.authentication.session_strategy'), $a, 'main', $f, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($c, $a, array('login_path' => '/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $d), array('use_forward' => false, 'check_path' => '/login_check', 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $d, $this->get('event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5419b5a18b299', $d), 5 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $a, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($c, $a, '/login', false), NULL, NULL, $d));
     }
 
     /**
@@ -3685,7 +3692,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSonata_Block_ContextManager_DefaultService()
     {
-        return $this->services['sonata.block.context_manager.default'] = new \Sonata\BlockBundle\Block\BlockContextManager($this->get('sonata.block.loader.chain'), $this->get('sonata.block.manager'), array('by_type' => array('sonata.admin.block.admin_list' => 'sonata.cache.noop', 'sonata.block.service.text' => 'sonata.cache.noop', 'sonata.block.service.rss' => 'sonata.cache.noop', 'sonata.user.block.menu' => 'sonata.cache.noop', 'sonata.user.block.account' => 'sonata.cache.noop')), $this->get('logger', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+        return $this->services['sonata.block.context_manager.default'] = new \Sonata\BlockBundle\Block\BlockContextManager($this->get('sonata.block.loader.chain'), $this->get('sonata.block.manager'), array('by_type' => array('sonata.admin.block.admin_list' => 'sonata.cache.noop', 'sonata.admin.block.search_result' => 'sonata.cache.noop', 'sonata.block.service.text' => 'sonata.cache.noop', 'sonata.block.service.rss' => 'sonata.cache.noop', 'sonata.user.block.menu' => 'sonata.cache.noop', 'sonata.user.block.account' => 'sonata.cache.noop')), $this->get('logger', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
 
     /**
@@ -3846,7 +3853,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSonata_Block_Loader_ServiceService()
     {
-        return $this->services['sonata.block.loader.service'] = new \Sonata\BlockBundle\Block\Loader\ServiceLoader(array(0 => 'sonata.admin.block.admin_list', 1 => 'sonata.block.service.text', 2 => 'sonata.block.service.rss', 3 => 'sonata.user.block.menu', 4 => 'sonata.user.block.account'));
+        return $this->services['sonata.block.loader.service'] = new \Sonata\BlockBundle\Block\Loader\ServiceLoader(array(0 => 'sonata.admin.block.admin_list', 1 => 'sonata.admin.block.search_result', 2 => 'sonata.block.service.text', 3 => 'sonata.block.service.rss', 4 => 'sonata.user.block.menu', 5 => 'sonata.user.block.account'));
     }
 
     /**
@@ -3950,7 +3957,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSonata_Block_Templating_HelperService()
     {
-        return $this->services['sonata.block.templating.helper'] = new \Sonata\BlockBundle\Templating\Helper\BlockHelper($this->get('sonata.block.manager'), array('by_type' => array('sonata.admin.block.admin_list' => 'sonata.cache.noop', 'sonata.block.service.text' => 'sonata.cache.noop', 'sonata.block.service.rss' => 'sonata.cache.noop', 'sonata.user.block.menu' => 'sonata.cache.noop', 'sonata.user.block.account' => 'sonata.cache.noop')), $this->get('sonata.block.renderer.default'), $this->get('sonata.block.context_manager.default'), $this->get('event_dispatcher'), NULL, $this->get('sonata.block.cache.handler.default', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('debug.stopwatch', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+        return $this->services['sonata.block.templating.helper'] = new \Sonata\BlockBundle\Templating\Helper\BlockHelper($this->get('sonata.block.manager'), array('by_type' => array('sonata.admin.block.admin_list' => 'sonata.cache.noop', 'sonata.admin.block.search_result' => 'sonata.cache.noop', 'sonata.block.service.text' => 'sonata.cache.noop', 'sonata.block.service.rss' => 'sonata.cache.noop', 'sonata.user.block.menu' => 'sonata.cache.noop', 'sonata.user.block.account' => 'sonata.cache.noop')), $this->get('sonata.block.renderer.default'), $this->get('sonata.block.context_manager.default'), $this->get('event_dispatcher'), NULL, $this->get('sonata.block.cache.handler.default', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('debug.stopwatch', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
 
     /**
@@ -4403,6 +4410,19 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'sonata.user.manager.user' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Sonata\UserBundle\Entity\UserManagerProxy A Sonata\UserBundle\Entity\UserManagerProxy instance.
+     */
+    protected function getSonata_User_Manager_UserService()
+    {
+        return $this->services['sonata.user.manager.user'] = new \Sonata\UserBundle\Entity\UserManagerProxy('Sonata\\UserBundle\\Entity\\User', $this->get('doctrine'), $this->get('fos_user.user_manager'));
+    }
+
+    /**
      * Gets the 'sonata.user.profile.form' service.
      *
      * This service is shared.
@@ -4458,6 +4478,64 @@ class appDevDebugProjectContainer extends Container
     protected function getSonata_User_Profile_MenuBuilderService()
     {
         return $this->services['sonata.user.profile.menu_builder'] = new \Sonata\UserBundle\Menu\ProfileMenuBuilder($this->get('knp_menu.factory'), $this->get('translator.default'), array(0 => array('route' => 'sonata_user_profile_edit', 'label' => 'link_edit_profile', 'domain' => 'SonataUserBundle', 'route_parameters' => array()), 1 => array('route' => 'sonata_user_profile_edit_authentication', 'label' => 'link_edit_authentication', 'domain' => 'SonataUserBundle', 'route_parameters' => array())), $this->get('event_dispatcher'));
+    }
+
+    /**
+     * Gets the 'sonata.user.registration.form' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Symfony\Component\Form\Form A Symfony\Component\Form\Form instance.
+     */
+    protected function getSonata_User_Registration_FormService()
+    {
+        return $this->services['sonata.user.registration.form'] = $this->get('form.factory')->createNamed('sonata_user_registration_form', 'sonata_user_registration', NULL, array('validation_groups' => array(0 => 'Registration', 1 => 'Default')));
+    }
+
+    /**
+     * Gets the 'sonata.user.registration.form.handler' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Sonata\UserBundle\Form\Handler\RegistrationFormHandler A Sonata\UserBundle\Form\Handler\RegistrationFormHandler instance.
+     * 
+     * @throws InactiveScopeException when the 'sonata.user.registration.form.handler' service is requested while the 'request' scope is not active
+     */
+    protected function getSonata_User_Registration_Form_HandlerService()
+    {
+        if (!isset($this->scopedServices['request'])) {
+            throw new InactiveScopeException('sonata.user.registration.form.handler', 'request');
+        }
+
+        return $this->services['sonata.user.registration.form.handler'] = $this->scopedServices['request']['sonata.user.registration.form.handler'] = new \Sonata\UserBundle\Form\Handler\RegistrationFormHandler($this->get('sonata.user.registration.form'), $this->get('request'), $this->get('fos_user.user_manager'), $this->get('fos_user.mailer'), $this->get('fos_user.util.token_generator'));
+    }
+
+    /**
+     * Gets the 'sonata.user.registration.form.type' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Sonata\UserBundle\Form\Type\RegistrationFormType A Sonata\UserBundle\Form\Type\RegistrationFormType instance.
+     */
+    protected function getSonata_User_Registration_Form_TypeService()
+    {
+        return $this->services['sonata.user.registration.form.type'] = new \Sonata\UserBundle\Form\Type\RegistrationFormType('Application\\Sonata\\UserBundle\\Entity\\User', array());
+    }
+
+    /**
+     * Gets the 'sonata.user.serializer.handler.user' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Sonata\UserBundle\Serializer\UserSerializerHandler A Sonata\UserBundle\Serializer\UserSerializerHandler instance.
+     */
+    protected function getSonata_User_Serializer_Handler_UserService()
+    {
+        return $this->services['sonata.user.serializer.handler.user'] = new \Sonata\UserBundle\Serializer\UserSerializerHandler($this->get('sonata.user.manager.user'));
     }
 
     /**
@@ -5367,6 +5445,9 @@ class appDevDebugProjectContainer extends Container
         $instance->addResource('yml', '/Applications/MAMP/htdocs/fcm/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.tr.yml', 'tr', 'validators');
         $instance->addResource('yml', '/Applications/MAMP/htdocs/fcm/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.uk.yml', 'uk', 'validators');
         $instance->addResource('yml', '/Applications/MAMP/htdocs/fcm/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.zh_CN.yml', 'zh_CN', 'validators');
+        $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/FOSUserBundle.en.xliff', 'en', 'FOSUserBundle');
+        $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/FOSUserBundle.fr.xliff', 'fr', 'FOSUserBundle');
+        $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/FOSUserBundle.hr.xliff', 'hr', 'FOSUserBundle');
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.bg.xliff', 'bg', 'SonataUserBundle');
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.ca.xliff', 'ca', 'SonataUserBundle');
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.cs.xliff', 'cs', 'SonataUserBundle');
@@ -5375,6 +5456,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.es.xliff', 'es', 'SonataUserBundle');
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.fa.xliff', 'fa', 'SonataUserBundle');
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.fr.xliff', 'fr', 'SonataUserBundle');
+        $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.hr.xliff', 'hr', 'SonataUserBundle');
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.it.xliff', 'it', 'SonataUserBundle');
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.lt.xliff', 'lt', 'SonataUserBundle');
         $instance->addResource('xliff', '/Applications/MAMP/htdocs/fcm/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.nl.xliff', 'nl', 'SonataUserBundle');
@@ -5838,7 +5920,7 @@ class appDevDebugProjectContainer extends Container
         $b = $this->get('security.user_checker');
         $c = $this->get('security.encoder_factory');
 
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($a, $b, 'admin', $c, true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('541887719857e'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($a, $b, 'main', $c, true), 3 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('541887719857e')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($a, $b, 'admin', $c, true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5419b5a18b299'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($a, $b, 'main', $c, true), 3 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5419b5a18b299')), true);
 
         $instance->setEventDispatcher($this->get('event_dispatcher'));
 
@@ -5991,7 +6073,7 @@ class appDevDebugProjectContainer extends Container
         $instance->add('sonata.user.block.menu', 'sonata.user.block.menu', array(0 => 'cms'));
         $instance->add('sonata.user.block.account', 'sonata.user.block.account', array(0 => 'cms'));
         $instance->add('sonata.admin.block.admin_list', 'sonata.admin.block.admin_list', array(0 => 'admin'));
-        $instance->add('sonata.admin.block.search_result', 'sonata.admin.block.search_result', array());
+        $instance->add('sonata.admin.block.search_result', 'sonata.admin.block.search_result', array(0 => 'admin'));
 
         return $instance;
     }
@@ -6683,6 +6765,15 @@ class appDevDebugProjectContainer extends Container
 
                     ),
                 ),
+                'sonata.admin.block.search_result' => array(
+                    'contexts' => array(
+                        0 => 'admin',
+                    ),
+                    'cache' => 'sonata.cache.noop',
+                    'settings' => array(
+
+                    ),
+                ),
                 'sonata.block.service.text' => array(
                     'contexts' => array(
                         0 => 'cms',
@@ -6726,6 +6817,7 @@ class appDevDebugProjectContainer extends Container
             'sonata_block.cache_blocks' => array(
                 'by_type' => array(
                     'sonata.admin.block.admin_list' => 'sonata.cache.noop',
+                    'sonata.admin.block.search_result' => 'sonata.cache.noop',
                     'sonata.block.service.text' => 'sonata.cache.noop',
                     'sonata.block.service.rss' => 'sonata.cache.noop',
                     'sonata.user.block.menu' => 'sonata.cache.noop',
@@ -6865,6 +6957,7 @@ class appDevDebugProjectContainer extends Container
             'sonata.user.admin.group.translation_domain' => 'SonataUserBundle',
             'sonata.user.admin.user.controller' => 'SonataAdminBundle:CRUD',
             'sonata.user.admin.group.controller' => 'SonataAdminBundle:CRUD',
+            'sonata.user.default_avatar' => 'bundles/sonatauser/default_avatar.png',
             'sonata.user.impersonating' => false,
             'sonata.user.google.authenticator.enabled' => false,
             'sonata.user.profile.form.type' => 'sonata_user_profile',
@@ -6885,6 +6978,15 @@ class appDevDebugProjectContainer extends Container
                     ),
                     'type' => 'sonata.block.service.text',
                 ),
+            ),
+            'sonata.user.registration.form.options' => array(
+
+            ),
+            'sonata.user.registration.form.type' => 'sonata_user_registration',
+            'sonata.user.registration.form.name' => 'sonata_user_registration_form',
+            'sonata.user.registration.form.validation_groups' => array(
+                0 => 'Registration',
+                1 => 'Default',
             ),
             'sonata.admin.configuration.templates' => array(
                 'user_block' => 'SonataUserBundle:Admin/Core:user_block.html.twig',

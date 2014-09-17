@@ -15,11 +15,6 @@ class RouteVoter implements VoterInterface
      */
     private $request;
 
-    public function __construct(Request $request = null)
-    {
-        $this->request = $request;
-    }
-
     public function setRequest(Request $request)
     {
         $this->request = $request;

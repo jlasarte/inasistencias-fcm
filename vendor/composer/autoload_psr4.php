@@ -11,6 +11,7 @@ return array(
     'Sonata\\Doctrine\\Tests\\' => array($vendorDir . '/sonata-project/doctrine-extensions/tests'),
     'Sonata\\Doctrine\\' => array($vendorDir . '/sonata-project/doctrine-extensions/src'),
     'Sonata\\DoctrineORMAdminBundle\\' => array($vendorDir . '/sonata-project/doctrine-orm-admin-bundle'),
+    'Sonata\\DatagridBundle\\' => array($vendorDir . '/sonata-project/datagrid-bundle'),
     'Sonata\\CoreBundle\\' => array($vendorDir . '/sonata-project/core-bundle'),
     'Sonata\\Cache\\Tests\\' => array($vendorDir . '/sonata-project/cache/test'),
     'Sonata\\Cache\\' => array($vendorDir . '/sonata-project/cache/lib'),
