@@ -1,5 +1,0 @@
-_assetic:
-    resource: .
-    type: assetic
-_app:
-    resource: /Applications/MAMP/htdocs/fcm/app/config/routing_dev.yml
