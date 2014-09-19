@@ -1,5 +1,4 @@
 <?php
-// src/Blogger/BlogBundle/Entity/Blog.php
 
 namespace Medicina\InasistenciasBundle\Entity;
 
@@ -17,7 +16,7 @@ class Employee
      * @ORM\GeneratedValue(strategy="AUTO")
      */
 	protected $id;
- 	
+
  	/**
      * @ORM\Column(type="string")
      */
@@ -29,7 +28,96 @@ class Employee
     protected $last_name;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Office", inversedBy="employee")
+     */
+    protected $office;
+
+    /**
     * @ORM\Column(type="string")
     */
-    protected $positiom;
+    protected $position;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Employee
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set last_name
+     *
+     * @param string $lastName
+     * @return Employee
+     */
+    public function setLastName($lastName)
+    {
+        $this->last_name = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Get last_name
+     *
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->last_name;
+    }
+
+    /**
+     * Set positiom
+     *
+     * @param string $positiom
+     * @return Employee
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get positiom
+     *
+     * @return string
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    public function __toString() {
+        return $this->getLastName() ? : "Empleado";
+    }
 }

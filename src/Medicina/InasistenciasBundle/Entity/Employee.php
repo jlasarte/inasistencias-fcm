@@ -1,5 +1,4 @@
 <?php
-// src/Blogger/BlogBundle/Entity/Blog.php
 
 namespace Medicina\InasistenciasBundle\Entity;
 
@@ -29,9 +28,11 @@ class Employee
     protected $last_name;
 
     /**
-    * @ORM\Column(type="string")
-    */
-    protected $position;
+     * @ORM\ManyToOne(targetEntity="Office", inversedBy="employees")
+     * @ORM\JoinColumn(name="office_id", referencedColumnName="id")
+     */
+    protected $office;
+
 
     /**
      * Get id
@@ -114,5 +115,28 @@ class Employee
 
     public function __toString() {
         return $this->getLastName() ? : "Empleado";
+    }
+
+    /**
+     * Set office
+     *
+     * @param \Medicina\InasistenciasBundle\Entity\Office $office
+     * @return Employee
+     */
+    public function setOffice(\Medicina\InasistenciasBundle\Entity\Office $office = null)
+    {
+        $this->office = $office;
+
+        return $this;
+    }
+
+    /**
+     * Get office
+     *
+     * @return \Medicina\InasistenciasBundle\Entity\Office 
+     */
+    public function getOffice()
+    {
+        return $this->office;
     }
 }

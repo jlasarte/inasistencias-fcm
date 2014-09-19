@@ -7,25 +7,33 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Show\ShowMapper;
 
-class EmployeeAdmin extends Admin
+class OfficeAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
             ->add('name', 'text', array('label' => 'Nombre'))
-            ->add('last_name', 'text', array('label' => 'Apellido'))
-            ->add('office', 'sonata_type_model_list', array())
         ;
     }
+
+    // Fields to be shown on create/edit forms
+    protected function configureShowFields(ShowMapper $showMapper)
+    {
+        $showMapper
+            ->add('name')
+            ->add('employees')
+        ;
+    }
+
 
     // Fields to be shown on filter forms
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
             ->add('name')
-            ->add('last_name')
         ;
     }
 
@@ -34,7 +42,6 @@ class EmployeeAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('name')
-            ->add('last_name')
         ;
     }
 }
