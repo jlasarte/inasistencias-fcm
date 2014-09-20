@@ -16,7 +16,7 @@ class EmployeeAdmin extends Admin
         $formMapper
             ->add('name', 'text', array('label' => 'Nombre'))
             ->add('last_name', 'text', array('label' => 'Apellido'))
-            ->add('office', 'sonata_type_model_list', array())
+            ->add('office', 'sonata_type_model_autocomplete', array('property'=>'name','label'=> 'Oficina'))
         ;
     }
 
@@ -24,8 +24,9 @@ class EmployeeAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('name')
-            ->add('last_name')
+            ->add('name', null, array('label'=> 'Nombre'))
+            ->add('last_name', null, array('label'=>'Apellido'))
+            ->add('office', null, array('label'=>'Oficina'))
         ;
     }
 
@@ -33,8 +34,9 @@ class EmployeeAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
-            ->add('last_name')
+            ->addIdentifier('name', null, array('label'=>'Nombre'))
+            ->add('last_name', null, array('label'=>'Apellido'))
+            ->add('office', null, array('label'=>'Oficina'))
         ;
     }
 }

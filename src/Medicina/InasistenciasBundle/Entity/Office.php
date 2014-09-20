@@ -1,7 +1,7 @@
 <?php
 
 namespace Medicina\InasistenciasBundle\Entity;
-
+use Doctrine\Common\Collections\ArrayCollection as ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
