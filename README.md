@@ -16,7 +16,7 @@ o lo dejan por ahí tirado (como hice yo) y lo usan, por ej:
 
     php ~/composer.phar install
 
-Esto:
+Esto instala:
 
 - Todas las bundles requeridas por el proyecto
 - Todos los assets (css, js) requeridas por las bundles
