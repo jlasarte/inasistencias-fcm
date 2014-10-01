@@ -1,5 +1,4 @@
 <?php
-// src/Acme/DemoBundle/Admin/PostAdmin.php
 
 namespace Medicina\InasistenciasBundle\Admin;
 
@@ -9,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class OfficeAdmin extends Admin
+class EmployeeTypeAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)

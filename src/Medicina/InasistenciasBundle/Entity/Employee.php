@@ -33,6 +33,12 @@ class Employee
      */
     protected $office;
 
+    /**
+    * @ORM\ManyToOne(targetEntity="EmployeeType", inversedBy="employees")
+    * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+    */
+    protected $type;
+
 
     /**
      * Get id
@@ -138,5 +144,28 @@ class Employee
     public function getOffice()
     {
         return $this->office;
+    }
+
+    /**
+     * Set office
+     *
+     * @param \Medicina\InasistenciasBundle\Entity\EmployeeType $type
+     * @return Employee
+     */
+    public function setType(\Medicina\InasistenciasBundle\Entity\EmployeeType $type = null)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Medicina\InasistenciasBundle\Entity\EmployeeType 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

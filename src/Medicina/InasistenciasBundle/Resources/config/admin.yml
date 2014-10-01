@@ -22,3 +22,25 @@ services:
             - ~
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
+
+    sonata.admin.employee_type:
+        class: Medicina\InasistenciasBundle\Admin\EmployeeTypeAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Tipos de Empleado" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\EmployeeType
+            - ~
+        calls:
+            - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
+
+    sonata.admin.compensatory_part:
+        class: Medicina\InasistenciasBundle\Admin\CompensatoryPartAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Compensatorios", label: "Compensatorios" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\CompensatoryPart
+            - ~
+        calls:
+            - [setTranslationDomain, [MedicinaInasistenciasBundle]]

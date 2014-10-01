@@ -1,0 +1,52 @@
+<?php 
+
+namespace Medicina\InasistenciasBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection as ArrayCollection; 
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="compensatory_part")
+ */
+class CompensatoryPart
+{
+	/**
+	 * @ORM\Id
+	 * @ORM\Column(type="integer", name="id")
+	 * @ORM\GeneratedValue
+	 */
+	protected $id = null;
+	
+	/**
+	 * @ORM\Column(type="boolean", name="note", nullable=false)
+	 */
+	protected $note = false;
+	
+	/**
+	 * @ORM\Column(type="date", name="date")
+	 */
+	protected $date = null;
+	
+	/**
+	 * @ORM\Column(type="integer", name="hours", unique=false)
+	 */
+	protected $hours;
+	
+	/**
+	 * @ORM\Column(type="integer", name="minutes", unique=false)
+	 */
+	protected $minutes;
+	
+
+	/**
+	 * @ORM\Column(type="boolean", name="in_week", nullable=false)
+	 */
+	protected $in_week = true;
+	
+	 /**
+     * @ORM\ManyToOne(targetEntity="Compensatory", inversedBy="parts")
+     * @ORM\JoinColumn(name="compensatory_id", referencedColumnName="id")
+     */
+    protected $compensatory;
+}

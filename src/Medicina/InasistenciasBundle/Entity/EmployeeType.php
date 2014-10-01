@@ -1,14 +1,15 @@
 <?php
-
 namespace Medicina\InasistenciasBundle\Entity;
-use Doctrine\Common\Collections\ArrayCollection as ArrayCollection;
+
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection as ArrayCollection;
 
 /**
- * @ORM\Table(name="office")
- * @ORM\Entity()
+ * @ORM\Entity
+ * @ORM\Table(name="employee_type")
  */
-class Office {
+class EmployeeType 
+{
 
 	/**
      * @ORM\Id
@@ -23,7 +24,7 @@ class Office {
 	protected $name;
 
 	 /**
-     * @ORM\OneToMany(targetEntity="Employee", mappedBy="office")
+     * @ORM\OneToMany(targetEntity="Employee", mappedBy="type")
      */
     protected $employees;
 
@@ -41,7 +42,7 @@ class Office {
      * Set name
      *
      * @param string $name
-     * @return Office
+     * @return EmployeeType
      */
     public function setName($name)
     {
@@ -69,7 +70,7 @@ class Office {
      * Add employees
      *
      * @param \Medicina\InasistenciasBundle\Entity\Employee $employees
-     * @return Office
+     * @return EmployeeType
      */
     public function addEmployee(\Medicina\InasistenciasBundle\Entity\Employee $employees)
     {

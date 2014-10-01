@@ -17,6 +17,7 @@ class EmployeeAdmin extends Admin
             ->add('name', 'text', array('label' => 'Nombre'))
             ->add('last_name', 'text', array('label' => 'Apellido'))
             ->add('office', 'sonata_type_model_autocomplete', array('property'=>'name','label'=> 'Oficina'))
+            ->add('type', 'sonata_type_model', array('property'=>'name','label'=> 'Tipo de Empleado'))
         ;
     }
 
