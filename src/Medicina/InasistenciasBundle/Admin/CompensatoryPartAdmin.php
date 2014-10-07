@@ -13,12 +13,21 @@ class CompensatoryPartAdmin extends Admin
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
+        $now = new \DateTime();
         $formMapper
+            ->add('hours', 'integer', array('label' => 'Horas'))
+            ->add('minutes', 'integer', array('label' => 'Minutos'))
             ->add('note', 'checkbox', array('label' => 'Por Nota?'))
+            ->add('in_week', 'checkbox', array('label' => 'Durante la Semana?'))
+            ->add('date', 'sonata_type_date_picker', array(
+                        'years' => range(1900, $now->format('Y')),
+                        'dp_min_date' => '1-1-1900',
+                        'dp_max_date' => $now->format('c'),
+                        'required' => false
+                    ))
         ;
     }
 
-    // Fields to be shown on create/edit forms
     protected function configureShowFields(ShowMapper $showMapper)
     {
        

@@ -37,7 +37,7 @@ services:
     sonata.admin.compensatory_part:
         class: Medicina\InasistenciasBundle\Admin\CompensatoryPartAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Compensatorios", label: "Compensatorios" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Módulos de Tiempo" }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\CompensatoryPart

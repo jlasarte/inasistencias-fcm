@@ -197,4 +197,8 @@ class CompensatoryPart
     {
         return $this->compensatory;
     }
+
+    public function __toString(){
+        return "Módulo de tiempo";
+    }
 }
