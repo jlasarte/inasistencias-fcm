@@ -51,6 +51,12 @@ class CompensatoryPart
     protected $compensatory;
 
     /**
+    * @ORM\ManyToOne(targetEntity="Employee", inversedBy="compensatory_parts")
+    * @ORM\JoinColumn(name="employee_id", referencedColumnName="id")
+    */
+    protected $employee;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -196,6 +202,29 @@ class CompensatoryPart
     public function getCompensatory()
     {
         return $this->compensatory;
+    }
+
+    /**
+     * Set compensatory
+     *
+     * @param \Medicina\InasistenciasBundle\Entity\Employee $employee
+     * @return Employee
+     */
+    public function setEmployee(\Medicina\InasistenciasBundle\Entity\Employee $employee = null)
+    {
+        $this->employee = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Get employee
+     *
+     * @return \Medicina\InasistenciasBundle\Entity\Employee 
+     */
+    public function getEmployee()
+    {
+        return $this->employee;
     }
 
     public function __toString(){

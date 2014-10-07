@@ -15,6 +15,7 @@ class CompensatoryPartAdmin extends Admin
     {
         $now = new \DateTime();
         $formMapper
+            ->add('employee', 'sonata_type_model', array('property'=>'name','label'=> 'Empleado'))
             ->add('hours', 'integer', array('label' => 'Horas'))
             ->add('minutes', 'integer', array('label' => 'Minutos'))
             ->add('note', 'checkbox', array('label' => 'Por Nota?'))

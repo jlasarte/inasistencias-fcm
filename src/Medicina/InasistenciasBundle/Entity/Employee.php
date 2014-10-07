@@ -39,6 +39,11 @@ class Employee
     */
     protected $type;
 
+    /**
+     * @ORM\OneToMany(targetEntity="CompensatoryPart", mappedBy="employee")
+     */
+    protected $compensatory_parts;
+
 
     /**
      * Get id
@@ -167,5 +172,28 @@ class Employee
     public function getType()
     {
         return $this->type;
+    }
+
+     /**
+     * Add parts
+     *
+     * @param \Medicina\InasistenciasBundle\Entity\CompensatoryPart $parts
+     * @return Compensatory
+     */
+    public function addCompensatoryPart(\Medicina\InasistenciasBundle\Entity\CompensatoryPart $parts)
+    {
+        $this->compensatory_parts[] = $parts;
+
+        return $this;
+    }
+
+    /**
+     * Remove parts
+     *
+     * @param \Medicina\InasistenciasBundle\Entity\CompensatoryPart $parts
+     */
+    public function removeCompensatoryPart(\Medicina\InasistenciasBundle\Entity\CompensatoryPart $parts)
+    {
+        $this->compensatory_parts->removeElement($parts);
     }
 }
