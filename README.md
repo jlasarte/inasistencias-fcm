@@ -34,8 +34,13 @@ máquina.
 
     php app/console doctrine:schema:update --force
 
-4) Crear admin
---------------
+4) Correr las fixtures
+----------------------
+
+	php app/console doctrine:fixtures:load
+
+5) Crear admin user
+-------------------
 
     php app/console fos:user:create adminuser --super-admin
 
