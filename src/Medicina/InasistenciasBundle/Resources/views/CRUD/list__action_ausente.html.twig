@@ -1,0 +1,17 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% if admin.isGranted('AUSENTE', object) and admin.hasRoute('compensatory_part.create_by_user') %}
+    <a href="{{ admin.generateObjectUrl('compensatory_part.create') }}" class="btn btn-sm btn-default view_link" title="{{ 'action_show'|trans({}, 'SonataAdminBundle') }}">
+        <i class="glyphicon glyphicon-plus"></i>
+        Ausente
+    </a>
+{% endif %}

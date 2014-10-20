@@ -32,7 +32,6 @@ class AppKernel extends Kernel
         new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
         new FOS\UserBundle\FOSUserBundle(),
         new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-
         // Then add SonataAdminBundle
         new Sonata\AdminBundle\SonataAdminBundle(),
             new Medicina\InasistenciasBundle\MedicinaInasistenciasBundle(),

@@ -7,9 +7,16 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class CompensatoryPartAdmin extends Admin
 {
+
+    protected function configureRoutes(RouteCollection $collection) 
+    {
+        $collection->add('createbyuser');
+    }
+
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {

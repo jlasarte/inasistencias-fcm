@@ -8,9 +8,10 @@ services:
             - ~
             - Medicina\InasistenciasBundle\Entity\Employee
             - ~
+            # MedicinaInasistenciasBundle:CRUD
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
-        #   - [ setTemplate, [edit, MedicinaInasistenciasBundle:InasistenciaAdmin:edit.html.twig]]
+            # [ setTemplate, [ausente, MedicinaInasistenciasBundle:InasistenciaAdmin:edit.html.twig]]
 
     sonata.admin.office:
         class: Medicina\InasistenciasBundle\Admin\OfficeAdmin
@@ -41,6 +42,6 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\CompensatoryPart
-            - ~
+            - MedicinaInasistenciasBundle:CompensatoryCRUD
         calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
