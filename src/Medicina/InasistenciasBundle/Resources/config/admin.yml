@@ -11,6 +11,7 @@ services:
             # MedicinaInasistenciasBundle:CRUD
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
+            - [ addChild, [@sonata.admin.compensatory_part]]
             # [ setTemplate, [ausente, MedicinaInasistenciasBundle:InasistenciaAdmin:edit.html.twig]]
 
     sonata.admin.office:
@@ -42,6 +43,7 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\CompensatoryPart
-            - MedicinaInasistenciasBundle:CompensatoryCRUD
+            - ~
+            #- MedicinaInasistenciasBundle:CompensatoryCRUD
         calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]

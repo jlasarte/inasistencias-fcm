@@ -10,8 +10,8 @@ file that was distributed with this source code.
 #}
 
 {% if admin.isGranted('AUSENTE', object) and admin.hasRoute('show') %}
-    <a href="{{ admin.generateUrl('..compensatorypart.createbyuser') }}" class="btn btn-sm btn-default view_link" title="{{ 'action_show'|trans({}, 'SonataAdminBundle') }}">
+    <a href="{{ path('admin_medicina_inasistencias_compensatorypart_createbyuser') }}" class="btn btn-sm btn-default view_link" title="{{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}">
         <i class="glyphicon glyphicon-plus"></i>
-        {{ 'action_show'|trans({}, 'SonataAdminBundle') }}
+        {{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}
     </a>
 {% endif %}

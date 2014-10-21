@@ -45,6 +45,9 @@ class Employee
     protected $compensatory_parts;
 
 
+    protected $fullname;
+
+
     /**
      * Get id
      *
@@ -126,6 +129,10 @@ class Employee
 
     public function __toString() {
         return $this->getLastName() ? : "Empleado";
+    }
+
+    public function getFullname() {
+        return $this->getName()." ".$this->getLastName();
     }
 
     /**
