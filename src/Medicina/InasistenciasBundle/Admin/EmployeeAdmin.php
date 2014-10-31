@@ -15,7 +15,7 @@ class EmployeeAdmin extends Admin
 
     protected function configureRoutes(RouteCollection $collection) 
     {
-        //$collection->add('ausente');
+        $collection->add('report', $this->getRouterIdParameter().'/report');
     }
 
     // Fields to be shown on create/edit forms

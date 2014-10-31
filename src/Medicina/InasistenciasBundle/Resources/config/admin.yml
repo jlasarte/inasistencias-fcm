@@ -7,7 +7,7 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Employee
-            - ~
+            - MedicinaInasistenciasBundle:EmployeeCRUD
             # MedicinaInasistenciasBundle:CRUD
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
@@ -48,6 +48,7 @@ services:
             #- MedicinaInasistenciasBundle:CompensatoryCRUD
         calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
+    
 
     sonata.admin.compensatory:
         class: Medicina\InasistenciasBundle\Admin\CompensatoryAdmin

@@ -151,3 +151,13 @@ twig:
     form:
         resources:
             - 'SonataCoreBundle:Form:datepicker.html.twig'
+
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     "\"C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe\""        
+        options:    []
+    image:
+        enabled:    true
+        binary:     /usr/local/bin/wkhtmltoimage
+        options:    []
