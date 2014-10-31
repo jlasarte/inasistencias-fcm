@@ -10,9 +10,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Datagrid\ORM\ProxyQuery;
 
-class CompensatoryPartAdmin extends Admin
+class CompensatoryAdmin extends Admin
 {
-    public $user_id = null;
     protected $parentAssociationMapping = 'employee';
 
     // Fields to be shown on create/edit forms
@@ -27,11 +26,14 @@ class CompensatoryPartAdmin extends Admin
 
         $formMapper
             ->add('employee', 'sonata_type_model', $employee_options)
-            ->add('hours', 'integer', array('label' => 'Horas'))
-            ->add('minutes', 'integer', array('label' => 'Minutos'))
-            ->add('note', 'checkbox', array('label' => 'Por Nota?'))
-            ->add('in_week', 'checkbox', array('label' => 'Durante la Semana?'))
-            ->add('date', 'sonata_type_date_picker', array(
+            ->add('created', 'sonata_type_date_picker', array(
+                        'years' => range(1900, $now->format('Y')),
+                        'dp_min_date' => '1-1-1900',
+                        'dp_max_date' => $now->format('c'),
+                        'required' => false,
+                        'label'=> 'Fecha'
+                    ))
+            ->add('used', 'sonata_type_date_picker', array(
                         'years' => range(1900, $now->format('Y')),
                         'dp_min_date' => '1-1-1900',
                         'dp_max_date' => $now->format('c'),

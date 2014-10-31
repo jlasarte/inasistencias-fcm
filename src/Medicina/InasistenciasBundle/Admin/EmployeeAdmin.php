@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
 
 class EmployeeAdmin extends Admin
@@ -36,6 +37,18 @@ class EmployeeAdmin extends Admin
             ->add('name', null, array('label'=> 'Nombre'))
             ->add('last_name', null, array('label'=>'Apellido'))
             ->add('office', null, array('label'=>'Oficina'))
+        ;
+    }
+
+    // Fields to be shown on create/edit forms
+    protected function configureShowFields(ShowMapper $showMapper)
+    {
+        $showMapper
+            ->add('fullname', false, array('label' => 'Nombre Completo'))
+            ->add('type', false, array('label' => 'Cargo'))
+            ->add('office', false, array('label'=>'Oficina'))
+            ->add('compensatory_parts', false, array('label'=>'Modulos de Tiempo'))
+            ->add('compensatories', false, array('label'=>'Compensatorios'))
         ;
     }
 

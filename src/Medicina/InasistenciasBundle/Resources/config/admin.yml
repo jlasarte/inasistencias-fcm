@@ -12,6 +12,7 @@ services:
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
             - [ addChild, [@sonata.admin.compensatory_part]]
+            - [ addChild, [@sonata.admin.compensatory]]
             # [ setTemplate, [ausente, MedicinaInasistenciasBundle:InasistenciaAdmin:edit.html.twig]]
 
     sonata.admin.office:
@@ -43,6 +44,18 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\CompensatoryPart
+            - ~
+            #- MedicinaInasistenciasBundle:CompensatoryCRUD
+        calls:
+            - [setTranslationDomain, [MedicinaInasistenciasBundle]]
+
+    sonata.admin.compensatory:
+        class: Medicina\InasistenciasBundle\Admin\CompensatoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Compensatorios" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\Compensatory
             - ~
             #- MedicinaInasistenciasBundle:CompensatoryCRUD
         calls:

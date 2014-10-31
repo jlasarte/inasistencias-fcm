@@ -34,9 +34,9 @@ class Compensatory {
 	protected $used;
 
 	/**
-	 * @ORM\ManyToOne(targetEntity="Employee")
-	 * @ORM\JoinColumn(name="employee_id", referencedColumnName="id")
-	 */
+    * @ORM\ManyToOne(targetEntity="Employee", inversedBy="compensatories")
+    * @ORM\JoinColumn(name="employee_id", referencedColumnName="id")
+    */
 	protected $employee;
 	
 		

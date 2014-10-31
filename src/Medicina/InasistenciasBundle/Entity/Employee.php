@@ -39,10 +39,16 @@ class Employee
     */
     protected $type;
 
+
     /**
      * @ORM\OneToMany(targetEntity="CompensatoryPart", mappedBy="employee")
      */
     protected $compensatory_parts;
+
+    /**
+    * @ORM\OneToMany(targetEntity="Compensatory", mappedBy="employee")
+    */
+    protected $compensatories;
 
 
     protected $fullname;
