@@ -15,7 +15,7 @@ class CompensatoryPartAdmin extends Admin
     public $user_id = null;
     protected $parentAssociationMapping = 'employee';
 
-    // Fields to be shown on create/edit forms
+    //
     protected function configureFormFields(FormMapper $formMapper)
     {
         $now = new \DateTime();
@@ -27,10 +27,6 @@ class CompensatoryPartAdmin extends Admin
 
         $formMapper
             ->add('employee', 'sonata_type_model', $employee_options)
-            ->add('hours', 'integer', array('label' => 'Horas'))
-            ->add('minutes', 'integer', array('label' => 'Minutos'))
-            ->add('note', 'checkbox', array('label' => 'Por Nota?'))
-            ->add('in_week', 'checkbox', array('label' => 'Durante la Semana?'))
             ->add('date', 'sonata_type_date_picker', array(
                         'years' => range(1900, $now->format('Y')),
                         'dp_min_date' => '1-1-1900',
@@ -38,6 +34,11 @@ class CompensatoryPartAdmin extends Admin
                         'required' => false,
                         'label'=> 'Fecha'
                     ))
+            ->add('hours', 'integer', array('label' => 'Horas'))
+            ->add('minutes', 'integer', array('label' => 'Minutos'))
+            ->add('note', 'checkbox', array('label' => 'Por Nota?',  'required'=>false))
+            ->add('in_week', 'checkbox', array('label' => 'Durante la Semana?',  'required'=>false))
+           
         ;
     }
 
@@ -57,7 +58,7 @@ class CompensatoryPartAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('date')
+            ->addIdentifier('displayInfo', null, array('label'=>'Compensatorio'))
         ;
     }
 

@@ -129,7 +129,6 @@ doctrine:
             FOSUserBundle: ~
                                                    # If SonataUserBundle extends it
 
-
 security:
     access_control:
         # URL of FOSUserBundle which need to be available to anonymous users

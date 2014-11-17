@@ -7,9 +7,13 @@ use Symfony\Component\HttpFoundation\Response as Response;
 
 class EmployeeCRUDController extends Controller
 {
-    public function reportAction($id = null) {
+    public function reportAction($id) {
+
+    	$id     = $this->get('request')->get($this->admin->getIdParameter());
+        $object = $this->admin->getObject($id);
+
 		$html = $this->renderView('MedicinaInasistenciasBundle:Reports:user_yearly.html.twig', array(
-		    'some'  => 'sarasa'
+		    'employee'  => $object
 		));
 
 		return new Response(

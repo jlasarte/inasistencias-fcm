@@ -28,6 +28,11 @@ class Employee
     protected $last_name;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    protected $dni;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Office", inversedBy="employees")
      * @ORM\JoinColumn(name="office_id", referencedColumnName="id")
      */
@@ -99,6 +104,30 @@ class Employee
 
         return $this;
     }
+
+    /**
+     * Get dni
+     *
+     * @return string
+     */
+    public function getDni()
+    {
+        return $this->dni;
+    }
+
+    /**
+     * Set dni
+     *
+     * @param string $dni
+     * @return Employee
+     */
+    public function setDni($dni)
+    {
+        $this->dni = $dni;
+
+        return $this;
+    }
+
 
     /**
      * Get last_name
@@ -200,6 +229,14 @@ class Employee
         return $this;
     }
 
+    /**
+    * Get CompensatoryParts
+    * @return \Medicina\InasistenciasBundle\Entity\CompensatoryPart
+    */
+    public function getCompensatoryParts() {
+        return $this->compensatory_parts;
+    }
+    
     /**
      * Remove parts
      *

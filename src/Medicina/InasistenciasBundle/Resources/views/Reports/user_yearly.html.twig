@@ -9,7 +9,9 @@
 				margin-top: 5%;
 			}
 
-
+			.employee-name {
+				text-align: right;
+			}
 		</style>
 	</head>
 
@@ -17,8 +19,8 @@
 		<div>
 			LOGO MEDICINA
 		</div>
-		<div>
-			APELLIDO Y NOMBRES: .........................................
+		<div class="employee-name">
+			APELLIDO Y NOMBRES: {{ employee.fullname }}
 		</div>
 		<div class="table-container">
 			<table class="report-table">

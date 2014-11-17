@@ -230,4 +230,11 @@ class CompensatoryPart
     public function __toString(){
         return "Módulo de tiempo";
     }
+
+
+    public function getDisplayinfo(){
+
+        $format = "%d horas y %d minutos el día %s";
+        return sprintf($format, $this->getHours(), $this->getMinutes(), $this->getDate()->format('Y-m-d'));
+    }
 }

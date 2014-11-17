@@ -11,7 +11,6 @@ file that was distributed with this source code.
 
 {% if admin.isGranted('COMPENSATORY_PART', object) and admin.hasRoute('show') %}
     <a href="{{ path('admin_medicina_inasistencias_employee_compensatorypart_list', {'id': object.id}) }}" class="btn btn-sm btn-default view_link" title="{{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}">
-        <i class="glyphicon glyphicon-plus"></i>
-        {{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}
+        Módulos de Tiempo
     </a>
 {% endif %}

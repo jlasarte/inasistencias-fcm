@@ -29,7 +29,7 @@ class Compensatory {
 	protected $created;
 	
 	/**
-	 * @ORM\Column(type="date", name="used")
+	 * @ORM\Column(type="date", name="used", nullable=true)
 	 */
 	protected $used;
 
@@ -159,4 +159,5 @@ class Compensatory {
     {
         return $this->employee;
     }
+
 }

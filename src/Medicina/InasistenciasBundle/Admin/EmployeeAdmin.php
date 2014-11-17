@@ -24,8 +24,22 @@ class EmployeeAdmin extends Admin
         $formMapper
             ->add('name', 'text', array('label' => 'Nombre'))
             ->add('last_name', 'text', array('label' => 'Apellido'))
-            ->add('office', 'sonata_type_model_autocomplete', array('property'=>'name','label'=> 'Oficina'))
-            ->add('type', 'sonata_type_model', array('property'=>'name','label'=> 'Tipo de Empleado'))
+            ->add('dni', 'text', array('label' => 'DNI'))
+            ->add('office', 
+                'sonata_type_model_autocomplete', 
+                array(
+                    'property'=>'name',
+                    'label'=> 'Oficina',
+                    'placeholder'=> 'Elija una Oficina')
+                )
+            ->add(
+                'type', 
+                'sonata_type_model', 
+                array(
+                    'property'=>'name',
+                    'label'=> 'Tipo de Empleado',
+                    'btn_add' => false
+                    ))
             
         ;
     }
@@ -61,11 +75,17 @@ class EmployeeAdmin extends Admin
             ->add('office', null, array('label'=>'Oficina'))
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    'show' => array(),
                     //'ausente'=>array(
                     //   'template'=>'MedicinaInasistenciasBundle:CRUD:list__action_ausente.html.twig'),
-                    'compensatorio'=>array(
-                        'template'=>'MedicinaInasistenciasBundle:CRUD:list__action_compensatorio.html.twig')
+                    'compensatory_part'=>array(
+                        'template'=>
+                        'MedicinaInasistenciasBundle:CRUD:list__action_compensatory_part.html.twig'),
+                    'compensatory'=>array(
+                        'template'=>
+                        'MedicinaInasistenciasBundle:CRUD:list__action_compensatory.html.twig'),
+                    'Reporte de Ausencias'=>array(
+                        'template'=>
+                        'MedicinaInasistenciasBundle:CRUD:list__action_report.html.twig')
                 )
             ))
         ;
