@@ -58,7 +58,7 @@ class CompensatoryPartAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('displayInfo', null, array('label'=>'Compensatorio'))
+            ->addIdentifier('displayInfo', null, array('label'=>'Módulo de Tiempo'))
         ;
     }
 

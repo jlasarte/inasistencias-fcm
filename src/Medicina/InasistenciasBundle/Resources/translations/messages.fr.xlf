@@ -3,7 +3,7 @@
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="1">
-                <source>Symfony2 is great</source>
+                <source>breadcrumb.link_employee_list</source>
                 <target>J'aime Symfony2</target>
             </trans-unit>
         </body>

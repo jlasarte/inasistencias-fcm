@@ -56,6 +56,12 @@ class Employee
     protected $compensatories;
 
 
+    /**
+    * @ORM\OneToMany(targetEntity="Absence", mappedBy="employee")
+    */
+    protected $absences;
+
+
     protected $fullname;
 
 

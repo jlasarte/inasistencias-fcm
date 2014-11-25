@@ -12,6 +12,7 @@ use Sonata\AdminBundle\Route\RouteCollection;
 
 class EmployeeAdmin extends Admin
 {
+    protected $translationDomain = 'InasistenciasBundle';
 
     protected function configureRoutes(RouteCollection $collection) 
     {
@@ -50,7 +51,6 @@ class EmployeeAdmin extends Admin
         $datagridMapper
             ->add('name', null, array('label'=> 'Nombre'))
             ->add('last_name', null, array('label'=>'Apellido'))
-            ->add('office', null, array('label'=>'Oficina'))
         ;
     }
 
@@ -72,11 +72,10 @@ class EmployeeAdmin extends Admin
         $listMapper
             ->addIdentifier('name', null, array('label'=>'Nombre'))
             ->add('last_name', null, array('label'=>'Apellido'))
-            ->add('office', null, array('label'=>'Oficina'))
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    //'ausente'=>array(
-                    //   'template'=>'MedicinaInasistenciasBundle:CRUD:list__action_ausente.html.twig'),
+                    'ausente'=>array(
+                       'template'=>'MedicinaInasistenciasBundle:CRUD:list__action_ausente.html.twig'),
                     'compensatory_part'=>array(
                         'template'=>
                         'MedicinaInasistenciasBundle:CRUD:list__action_compensatory_part.html.twig'),

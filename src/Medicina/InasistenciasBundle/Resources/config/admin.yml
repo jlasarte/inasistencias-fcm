@@ -3,7 +3,7 @@ services:
     sonata.admin.employee:
         class: Medicina\InasistenciasBundle\Admin\EmployeeAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Empleados" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Empleados", label_translator_strategy: "sonata.admin.label.strategy.underscore" }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Employee
@@ -13,12 +13,13 @@ services:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
             - [ addChild, [@sonata.admin.compensatory_part]]
             - [ addChild, [@sonata.admin.compensatory]]
+            - [ addChild, [@sonata.admin.absence]]
             # [ setTemplate, [ausente, MedicinaInasistenciasBundle:InasistenciaAdmin:edit.html.twig]]
 
     sonata.admin.office:
         class: Medicina\InasistenciasBundle\Admin\OfficeAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Oficinas" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Oficinas",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Office
@@ -29,7 +30,7 @@ services:
     sonata.admin.employee_type:
         class: Medicina\InasistenciasBundle\Admin\EmployeeTypeAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Tipos de Empleado" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Tipos de Empleado",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\EmployeeType
@@ -37,10 +38,21 @@ services:
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
 
+    sonata.admin.absence_type:
+        class: Medicina\InasistenciasBundle\Admin\AbsenceTypeAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Tipos de Ausencias",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\AbsenceType
+            - ~
+        calls:
+            - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
+
     sonata.admin.compensatory_part:
         class: Medicina\InasistenciasBundle\Admin\CompensatoryPartAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Módulos de Tiempo" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Módulos de Tiempo",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\CompensatoryPart
@@ -53,10 +65,22 @@ services:
     sonata.admin.compensatory:
         class: Medicina\InasistenciasBundle\Admin\CompensatoryAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Compensatorios" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Compensatorios",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Compensatory
+            - ~
+            #- MedicinaInasistenciasBundle:CompensatoryCRUD
+        calls:
+            - [setTranslationDomain, [MedicinaInasistenciasBundle]]
+
+    sonata.admin.absence:
+        class: Medicina\InasistenciasBundle\Admin\AbsenceAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Ausencias",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\Absence
             - ~
             #- MedicinaInasistenciasBundle:CompensatoryCRUD
         calls:

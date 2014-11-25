@@ -6,9 +6,9 @@ use Doctrine\Common\Collections\ArrayCollection as ArrayCollection;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="employee_type")
+ * @ORM\Table(name="absence_type")
  */
-class EmployeeType 
+class AbsenceType 
 {
 
 	/**
@@ -24,9 +24,9 @@ class EmployeeType
 	protected $name;
 
 	 /**
-     * @ORM\OneToMany(targetEntity="Employee", mappedBy="type")
+     * @ORM\OneToMany(targetEntity="Absence", mappedBy="type")
      */
-    protected $employees;
+    protected $absences;
 
     /**
      * Get id
@@ -63,30 +63,30 @@ class EmployeeType
 
     public function __construct()
     {
-        $this->employees = new ArrayCollection();
+        $this->absences = new ArrayCollection();
     }
 
     /**
-     * Add employees
+     * Add absences
      *
-     * @param \Medicina\InasistenciasBundle\Entity\Employee $employees
-     * @return EmployeeType
+     * @param \Medicina\InasistenciasBundle\Entity\Absence $a
+     * @return AbsenceType
      */
-    public function addEmployee(\Medicina\InasistenciasBundle\Entity\Employee $employees)
+    public function addAbsence(\Medicina\InasistenciasBundle\Entity\Absence $a)
     {
-        $this->employees[] = $employees;
+        $this->absences[] = $a;
 
         return $this;
     }
 
     /**
-     * Remove employees
+     * Remove absences
      *
-     * @param \Medicina\InasistenciasBundle\Entity\Employee $employees
+     * @param \Medicina\InasistenciasBundle\Entity\Absence $a
      */
-    public function removeEmployee(\Medicina\InasistenciasBundle\Entity\Employee $employees)
+    public function removeEmployee(\Medicina\InasistenciasBundle\Entity\Absence $a)
     {
-        $this->employees->removeElement($employees);
+        $this->absences->removeElement($a);
     }
 
     /**
@@ -100,7 +100,27 @@ class EmployeeType
     }
 
     public function __toString() {
-        return $this->getName() ? : "Tipo de Empleado";
+        return $this->getName() ? : "Tipo de Ausencia";
     }
 
+
+    /**
+     * Remove absences
+     *
+     * @param \Medicina\InasistenciasBundle\Entity\Absence $absences
+     */
+    public function removeAbsence(\Medicina\InasistenciasBundle\Entity\Absence $absences)
+    {
+        $this->absences->removeElement($absences);
+    }
+
+    /**
+     * Get absences
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAbsences()
+    {
+        return $this->absences;
+    }
 }

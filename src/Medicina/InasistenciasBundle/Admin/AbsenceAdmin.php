@@ -11,21 +11,18 @@ use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Datagrid\ORM\ProxyQuery;
 use Doctrine\ORM\EntityRepository;
 
-class CompensatoryAdmin extends Admin
+class AbsenceAdmin extends Admin
 {
     protected $parentAssociationMapping = 'employee';
 
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $now = new \DateTime();
-        
-        // Obtenemos el objeto padre (el empleado al cual le vamos a agregar el compensatorio)
+       
+        // Obtenemos el objeto padre (el empleado al cual le vamos a agregar la ausencia)
         $parent = $this->getParent()->getObject($this->request->get($this->getParent()->getIdParameter()));
-
-        // obtenemos los módulos de tiempo disponibles para este empleado
-        $parts = $parent->getCompensatoryParts();
-
+        
+        $now = new \DateTime();
 
         $employee_options = array(
             'property'=>'fullname',
@@ -35,37 +32,47 @@ class CompensatoryAdmin extends Admin
 
         $formMapper
             ->add('employee', 'sonata_type_model', $employee_options)
-            ->add('created', 'sonata_type_date_picker', array(
+            ->add('type', 'sonata_type_model', array('label'=>'Tipo de Ausencia', 'btn_add'=>false))
+            ->add('start', 'sonata_type_date_picker', array(
                         'years' => range(1900, $now->format('Y')),
                         'dp_min_date' => '1-1-1900',
                         'dp_max_date' => $now->format('c'),
-                        'required' => false,
-                        'label'=> 'Fecha Creación'
+                        'required' => true,
+                        'label'=> 'Inicio'
                     ))
-            ->add('used', 'hidden')
+            ->add('end', 'sonata_type_date_picker', array(
+                        'years' => range(1900, $now->format('Y')),
+                        'dp_min_date' => '1-1-1900',
+                        'dp_max_date' => $now->format('c'),
+                        'required' => true,
+                        'label'=> 'Fin'
+                    ))
+            ->add('remarks', 'text' ,array('label'=>'Observaciones', 'required'=> false))
+            ->add('with_pay', 'checkbox', array('label' => 'Con sueldo?',  'required'=>false))
             ->add(
-                'parts', 
+                'compensatories', 
                 'entity', array(
-                    'class' => 'MedicinaInasistenciasBundle:CompensatoryPart',
+                    'class' => 'MedicinaInasistenciasBundle:Compensatory',
                     'property' => 'displayinfo',
                     'multiple' => true,
-                    'label'=> 'Módulos de Tiempo Disponibles',
+                    'required' => false,
+                    'label'=> 'Compensatorios disponibles',
                     'query_builder' => function(EntityRepository $er) use ($parent){
                         return $er->createQueryBuilder('c')
-                            ->where('c.compensatory is NULL')
+                            ->where('c.absence is NULL')
                             ->andWhere('c.employee = :employee')
                             ->setParameter('employee', $parent);
                     }
 
-
-            ))
+                
+            )) 
         ;
     }
 
-    public function postPersist($object) {
-        foreach ($object->getParts() as $part) {
-            $part->setCompensatory($object);
-            $this->getModelManager()->update($part);
+    public function postPersist($absence) {
+        foreach ($absence->getCompensatories() as $c) {
+            $c->setAbsence($absence);
+            $this->getModelManager()->update($c);
         }
     }
 
@@ -85,7 +92,7 @@ class CompensatoryAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('created', null, array('label'=>'Compensatorio creado el'))
+            ->addIdentifier('start_and_end', null, array('label'=>'Ausencia'))
         ;
     }
 

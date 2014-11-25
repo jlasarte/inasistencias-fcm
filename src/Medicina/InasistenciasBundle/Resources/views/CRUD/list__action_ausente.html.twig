@@ -9,9 +9,9 @@ file that was distributed with this source code.
 
 #}
 
-{% if admin.isGranted('AUSENTE', object) and admin.hasRoute('compensatory_part.create_by_user') %}
-    <a href="{{ admin.generateObjectUrl('compensatory_part.create') }}" class="btn btn-sm btn-default view_link" title="{{ 'action_show'|trans({}, 'SonataAdminBundle') }}">
-        <i class="glyphicon glyphicon-plus"></i>
-        Ausente
+{% if admin.isGranted('MASTER', object) %}
+    <a href="{{ path('admin_medicina_inasistencias_employee_absence_list', {'id': object.id}) }}" class="btn btn-sm btn-default view_link" title="{{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}">
+        Ausentes
     </a>
 {% endif %}
+

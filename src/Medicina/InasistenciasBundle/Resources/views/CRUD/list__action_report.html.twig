@@ -9,7 +9,7 @@ file that was distributed with this source code.
 
 #}
 
-{% if admin.isGranted('REPORT', object) %}
+{% if admin.isGranted('MASTER', object) %}
     <a href="{{ path('admin_medicina_inasistencias_employee_report', {'id': object.id}) }}" class="btn btn-sm btn-default view_link" title="{{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}">
         Generar Reporte
     </a>

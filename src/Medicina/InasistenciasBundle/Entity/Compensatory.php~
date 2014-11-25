@@ -172,27 +172,4 @@ class Compensatory {
         return sprintf($format, $this->getEmployee()->getFullname(), $this->getCreated()->format('Y-m-d'));
     }
 
-
-    /**
-     * Set absence
-     *
-     * @param \Medicina\InasistenciasBundle\Entity\Absence $absence
-     * @return Compensatory
-     */
-    public function setAbsence(\Medicina\InasistenciasBundle\Entity\Absence $absence = null)
-    {
-        $this->absence = $absence;
-
-        return $this;
-    }
-
-    /**
-     * Get absence
-     *
-     * @return \Medicina\InasistenciasBundle\Entity\Absence 
-     */
-    public function getAbsence()
-    {
-        return $this->absence;
-    }
 }
