@@ -4,6 +4,7 @@ namespace Medicina\InasistenciasBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection as ArrayCollection; 
+use Sonata\AdminBundle\Exception\ModelManagerException as ModelManagerException;
 
 /**
  * @ORM\Entity
@@ -46,7 +47,7 @@ class CompensatoryPart
 	
 	 /**
      * @ORM\ManyToOne(targetEntity="Compensatory", inversedBy="parts")
-     * @ORM\JoinColumn(name="compensatory_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="compensatory_id", referencedColumnName="id", onDelete="SET NULL")
      */
     protected $compensatory;
 
@@ -236,5 +237,9 @@ class CompensatoryPart
 
         $format = "%d horas y %d minutos el día %s";
         return sprintf($format, $this->getHours(), $this->getMinutes(), $this->getDate()->format('Y-m-d'));
+    }
+
+    public function getUsed(){
+        return ($this->getCompensatory() != null);
     }
 }

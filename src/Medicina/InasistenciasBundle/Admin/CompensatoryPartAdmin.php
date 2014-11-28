@@ -9,6 +9,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Datagrid\ORM\ProxyQuery;
+use Medicina\InasistenciasBundle\Exception\DeleteValidationException as DeleteValidationException;
 
 class CompensatoryPartAdmin extends Admin
 {
@@ -42,6 +43,12 @@ class CompensatoryPartAdmin extends Admin
         ;
     }
 
+    public function preRemove($object) {
+        if ($object->getCompensatory() != null) {
+            throw new DeleteValidationException("No se puede eliminar un Módulo de tiempo que ya fue utilizado para crear un compensatorio. <br/> Pruebe primero borrando el compensatorio correspondiente");
+        }  
+    }
+
     protected function configureShowFields(ShowMapper $showMapper)
     {
        
@@ -59,6 +66,7 @@ class CompensatoryPartAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('displayInfo', null, array('label'=>'Módulo de Tiempo'))
+            ->addIdentifier('used', 'boolean')
         ;
     }
 

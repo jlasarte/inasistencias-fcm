@@ -10,6 +10,7 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Datagrid\ORM\ProxyQuery;
 use Doctrine\ORM\EntityRepository;
+use Medicina\InasistenciasBundle\Exception\DeleteValidationException as DeleteValidationException;
 
 class CompensatoryAdmin extends Admin
 {
@@ -42,8 +43,13 @@ class CompensatoryAdmin extends Admin
                         'required' => false,
                         'label'=> 'Fecha Creación'
                     ))
-            ->add('used', 'hidden')
-            ->add(
+            ->add('used', 'hidden');
+
+         $subject = $this->getSubject();
+
+        if ($subject->getId()==null) {
+            // The thumbnail field will only be added when the edited item is created
+            $formMapper->add(
                 'parts', 
                 'entity', array(
                     'class' => 'MedicinaInasistenciasBundle:CompensatoryPart',
@@ -54,12 +60,39 @@ class CompensatoryAdmin extends Admin
                         return $er->createQueryBuilder('c')
                             ->where('c.compensatory is NULL')
                             ->andWhere('c.employee = :employee')
+                            //->orWhere('c.compensatory = :compensatory')
                             ->setParameter('employee', $parent);
+                            //->setParameter('compensatory', $this->getSubject());
                     }
 
 
-            ))
-        ;
+            ));
+        } else {
+            $formMapper->add(
+                'parts', 
+                'entity', array(
+                    'class' => 'MedicinaInasistenciasBundle:CompensatoryPart',
+                    'property' => 'displayinfo',
+                    'multiple' => true,
+                    'label'=> 'Módulos de Tiempo Disponibles',
+                    'query_builder' => function(EntityRepository $er) use ($parent){
+                        return $er->createQueryBuilder('c')
+                            ->where('c.compensatory is NULL')
+                            ->andWhere('c.employee = :employee')
+                            ->orWhere('c.compensatory = :compensatory')
+                            ->setParameter('employee', $parent)
+                            ->setParameter('compensatory', $this->getSubject());
+                    }
+            ));
+        }
+
+            
+    }
+
+    public function preRemove($object) {
+        if ($object->getAbsence() != null) {
+            throw new DeleteValidationException("No se puede eliminar un Compensatorio que ya fue utilizado para justificar una inasistencia. <br/> Pruebe primero borrando la inasistencia correspondiente");
+        }  
     }
 
     public function postPersist($object) {
@@ -86,6 +119,7 @@ class CompensatoryAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('created', null, array('label'=>'Compensatorio creado el'))
+            ->addIdentifier('usedtojustify', 'boolean', array('label'=>'Utilizado para justificar una inasistencia?'))
         ;
     }
 

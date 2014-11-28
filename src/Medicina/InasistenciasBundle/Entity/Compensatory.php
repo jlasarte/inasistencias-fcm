@@ -41,7 +41,7 @@ class Compensatory {
 	
     /**
     * @ORM\ManyToOne(targetEntity="Absence", inversedBy="compensatories")
-    * @ORM\JoinColumn(name="absence_id", referencedColumnName="id", nullable=true)
+    * @ORM\JoinColumn(name="absence_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
     */
     protected $absence;
 		
@@ -194,5 +194,9 @@ class Compensatory {
     public function getAbsence()
     {
         return $this->absence;
+    }
+
+    public function getUsedtojustify(){
+        return ($this->getAbsence() != null);
     }
 }

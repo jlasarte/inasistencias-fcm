@@ -56,8 +56,7 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\CompensatoryPart
-            - ~
-            #- MedicinaInasistenciasBundle:CompensatoryCRUD
+            - MedicinaInasistenciasBundle:CompensatoryCRUD
         calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
     
@@ -69,8 +68,7 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Compensatory
-            - ~
-            #- MedicinaInasistenciasBundle:CompensatoryCRUD
+            - MedicinaInasistenciasBundle:CompensatoryCRUD
         calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
 

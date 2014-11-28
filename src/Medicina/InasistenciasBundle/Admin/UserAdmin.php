@@ -129,8 +129,6 @@ class UserAdmin extends Admin
             ->tab('Seguridad')
                 ->with('Estado', array('class' => 'col-md-4'))->end()
                 ->with('Groups', array('class' => 'col-md-4'))->end()
-                ->with('Keys', array('class' => 'col-md-4'))->end()
-                ->with('Roles', array('class' => 'col-md-12'))->end()
             ->end()
         ;
 
