@@ -49,6 +49,17 @@ services:
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
 
+    sonata.admin.absence_state:
+        class: Medicina\InasistenciasBundle\Admin\AbsenceStateAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Estados de Ausencias",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\AbsenceState
+            - ~
+        calls:
+            - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
+
     sonata.admin.compensatory_part:
         class: Medicina\InasistenciasBundle\Admin\CompensatoryPartAdmin
         tags:
@@ -79,7 +90,7 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Absence
-            - ~
-            #- MedicinaInasistenciasBundle:CompensatoryCRUD
+            - MedicinaInasistenciasBundle:AbsenceCRUD
         calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
+            - [ setTemplate, [edit, MedicinaInasistenciasBundle:InasistenciaAdmin:edit.html.twig]]

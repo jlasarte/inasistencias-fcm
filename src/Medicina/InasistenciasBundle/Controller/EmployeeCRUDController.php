@@ -16,12 +16,21 @@ class EmployeeCRUDController extends Controller
 		    'employee'  => $object
 		));
 
-		return new Response(
+		 $sql = " 
+	        SELECT name
+	          FROM employee
+	    	";
+
+	    $stmt = $this->admin->getmodelManager()->getEntityManager($object)->getConnection()->prepare($sql);
+	    $stmt->execute();
+    	var_dump($stmt->fetchAll());
+
+		/*return new Response(
     		$this->get('knp_snappy.pdf')->getOutputFromHtml($html, array('orientation'=>'Landscape')),
 		    200,
 		    array(
 		        'Content-Type'          => 'application/pdf'
 		    )
-		);
+		);*/
     }
 }

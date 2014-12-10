@@ -1,1 +1,702 @@
-[{"office_reference":"mantenimiento","type_reference":"pasante","name":"Jessamine","lastname":"Jensen"},{"office_reference":"contable","type_reference":"planta","name":"Hall","lastname":"Russo"},{"office_reference":"contable","type_reference":"planta","name":"Burke","lastname":"Mitchell"},{"office_reference":"informatica","type_reference":"pasante","name":"Macaulay","lastname":"Koch"},{"office_reference":"personal","type_reference":"pasante","name":"Signe","lastname":"Stein"},{"office_reference":"personal","type_reference":"pasante","name":"Rylee","lastname":"Pacheco"},{"office_reference":"personal","type_reference":"pasante","name":"Vernon","lastname":"Nieves"},{"office_reference":"biblioteca","type_reference":"contratado","name":"Ross","lastname":"Holloway"},{"office_reference":"mantenimiento","type_reference":"contratado","name":"Alisa","lastname":"Powell"},{"office_reference":"biblioteca","type_reference":"planta","name":"Jessamine","lastname":"Hicks"},{"office_reference":"informatica","type_reference":"contratado","name":"Wade","lastname":"Powers"},{"office_reference":"informatica","type_reference":"planta","name":"Gisela","lastname":"Oneal"},{"office_reference":"personal","type_reference":"contratado","name":"Amber","lastname":"Daniels"},{"office_reference":"informatica","type_reference":"planta","name":"Jorden","lastname":"Cunningham"},{"office_reference":"biblioteca","type_reference":"planta","name":"Geoffrey","lastname":"Orr"},{"office_reference":"academica","type_reference":"pasante","name":"Uta","lastname":"Barron"},{"office_reference":"biblioteca","type_reference":"contratado","name":"Barclay","lastname":"Rios"},{"office_reference":"academica","type_reference":"pasante","name":"Abel","lastname":"Pollard"},{"office_reference":"personal","type_reference":"pasante","name":"Clio","lastname":"Vaughan"},{"office_reference":"personal","type_reference":"planta","name":"Britanni","lastname":"Gibbs"},{"office_reference":"anatomia","type_reference":"pasante","name":"Thor","lastname":"Chavez"},{"office_reference":"mantenimiento","type_reference":"pasante","name":"Ursa","lastname":"Parker"},{"office_reference":"biblioteca","type_reference":"planta","name":"Halee","lastname":"Castillo"},{"office_reference":"personal","type_reference":"planta","name":"Kennedy","lastname":"Pickett"},{"office_reference":"contable","type_reference":"pasante","name":"Cyrus","lastname":"Wagner"},{"office_reference":"personal","type_reference":"planta","name":"Jesse","lastname":"Bush"},{"office_reference":"contable","type_reference":"pasante","name":"Aspen","lastname":"Sheppard"},{"office_reference":"academica","type_reference":"pasante","name":"Geraldine","lastname":"Whitaker"},{"office_reference":"anatomia","type_reference":"contratado","name":"Kenyon","lastname":"Daniels"},{"office_reference":"informatica","type_reference":"pasante","name":"Ryder","lastname":"Petty"},{"office_reference":"anatomia","type_reference":"pasante","name":"Nita","lastname":"Lowery"},{"office_reference":"academica","type_reference":"pasante","name":"Rama","lastname":"Mitchell"},{"office_reference":"mantenimiento","type_reference":"planta","name":"Maisie","lastname":"Mooney"},{"office_reference":"personal","type_reference":"planta","name":"Chester","lastname":"Finley"},{"office_reference":"academica","type_reference":"contratado","name":"Kasper","lastname":"Payne"},{"office_reference":"biblioteca","type_reference":"pasante","name":"Avram","lastname":"Levy"},{"office_reference":"mantenimiento","type_reference":"planta","name":"Gannon","lastname":"Ochoa"},{"office_reference":"informatica","type_reference":"pasante","name":"Urielle","lastname":"George"},{"office_reference":"anatomia","type_reference":"planta","name":"Vance","lastname":"Hale"},{"office_reference":"personal","type_reference":"planta","name":"Athena","lastname":"Morrow"},{"office_reference":"anatomia","type_reference":"pasante","name":"Edan","lastname":"Mckinney"},{"office_reference":"contable","type_reference":"pasante","name":"Preston","lastname":"Stephens"},{"office_reference":"contable","type_reference":"pasante","name":"Blaze","lastname":"Whitehead"},{"office_reference":"mantenimiento","type_reference":"pasante","name":"Bruno","lastname":"Gilmore"},{"office_reference":"informatica","type_reference":"contratado","name":"Cedric","lastname":"Hebert"},{"office_reference":"contable","type_reference":"planta","name":"Raphael","lastname":"Mullen"},{"office_reference":"personal","type_reference":"planta","name":"Anika","lastname":"Pittman"},{"office_reference":"anatomia","type_reference":"contratado","name":"Caesar","lastname":"Shelton"},{"office_reference":"academica","type_reference":"planta","name":"Buffy","lastname":"Green"},{"office_reference":"academica","type_reference":"planta","name":"Keegan","lastname":"Finch"},{"office_reference":"informatica","type_reference":"planta","name":"Cleo","lastname":"Shepard"},{"office_reference":"anatomia","type_reference":"planta","name":"Hall","lastname":"Ashley"},{"office_reference":"personal","type_reference":"contratado","name":"Renee","lastname":"Petersen"},{"office_reference":"mantenimiento","type_reference":"planta","name":"Jana","lastname":"Alexander"},{"office_reference":"mantenimiento","type_reference":"pasante","name":"Michelle","lastname":"Allen"},{"office_reference":"personal","type_reference":"pasante","name":"Gloria","lastname":"Salinas"},{"office_reference":"mantenimiento","type_reference":"pasante","name":"Shafira","lastname":"Hebert"},{"office_reference":"informatica","type_reference":"planta","name":"Gary","lastname":"Stevens"},{"office_reference":"contable","type_reference":"pasante","name":"Micah","lastname":"Duncan"},{"office_reference":"personal","type_reference":"pasante","name":"Roary","lastname":"Flowers"},{"office_reference":"personal","type_reference":"contratado","name":"Yolanda","lastname":"Hudson"},{"office_reference":"mantenimiento","type_reference":"contratado","name":"Libby","lastname":"Berg"},{"office_reference":"personal","type_reference":"planta","name":"Evan","lastname":"Anderson"},{"office_reference":"contable","type_reference":"planta","name":"Alan","lastname":"Townsend"},{"office_reference":"personal","type_reference":"planta","name":"Jolie","lastname":"Mcfarland"},{"office_reference":"anatomia","type_reference":"contratado","name":"Anastasia","lastname":"Rutledge"},{"office_reference":"mantenimiento","type_reference":"contratado","name":"Sigourney","lastname":"Hutchinson"},{"office_reference":"biblioteca","type_reference":"planta","name":"Blaze","lastname":"Justice"},{"office_reference":"contable","type_reference":"planta","name":"Alvin","lastname":"Morin"},{"office_reference":"informatica","type_reference":"contratado","name":"Rahim","lastname":"Kent"},{"office_reference":"contable","type_reference":"pasante","name":"Rylee","lastname":"Sanford"},{"office_reference":"biblioteca","type_reference":"pasante","name":"Murphy","lastname":"Wolf"},{"office_reference":"academica","type_reference":"planta","name":"Angela","lastname":"Mckenzie"},{"office_reference":"mantenimiento","type_reference":"planta","name":"Griffin","lastname":"Alvarez"},{"office_reference":"informatica","type_reference":"contratado","name":"Aurelia","lastname":"Dixon"},{"office_reference":"academica","type_reference":"pasante","name":"Chandler","lastname":"Bridges"},{"office_reference":"mantenimiento","type_reference":"pasante","name":"Aurora","lastname":"Gilmore"},{"office_reference":"academica","type_reference":"contratado","name":"Lareina","lastname":"Johns"},{"office_reference":"biblioteca","type_reference":"planta","name":"Chastity","lastname":"Burke"},{"office_reference":"personal","type_reference":"pasante","name":"Eric","lastname":"Fitzpatrick"},{"office_reference":"academica","type_reference":"contratado","name":"Joel","lastname":"Walker"},{"office_reference":"contable","type_reference":"pasante","name":"Maile","lastname":"Solis"},{"office_reference":"mantenimiento","type_reference":"planta","name":"Cara","lastname":"Irwin"},{"office_reference":"informatica","type_reference":"contratado","name":"Reed","lastname":"Gallegos"},{"office_reference":"academica","type_reference":"planta","name":"Rylee","lastname":"Hancock"},{"office_reference":"contable","type_reference":"contratado","name":"Brody","lastname":"Mcfadden"},{"office_reference":"mantenimiento","type_reference":"planta","name":"Brianna","lastname":"Larsen"},{"office_reference":"biblioteca","type_reference":"planta","name":"Dahlia","lastname":"Knowles"},{"office_reference":"anatomia","type_reference":"contratado","name":"Mikayla","lastname":"Glass"},{"office_reference":"biblioteca","type_reference":"contratado","name":"Kadeem","lastname":"Brown"},{"office_reference":"academica","type_reference":"planta","name":"Dakota","lastname":"Sherman"},{"office_reference":"contable","type_reference":"planta","name":"Doris","lastname":"Church"},{"office_reference":"anatomia","type_reference":"pasante","name":"Ray","lastname":"Cherry"},{"office_reference":"biblioteca","type_reference":"contratado","name":"Kevin","lastname":"Hodges"},{"office_reference":"anatomia","type_reference":"planta","name":"Maggie","lastname":"Dyer"},{"office_reference":"personal","type_reference":"planta","name":"Chanda","lastname":"Madden"},{"office_reference":"contable","type_reference":"pasante","name":"Rigel","lastname":"Fuentes"},{"office_reference":"contable","type_reference":"contratado","name":"Quemby","lastname":"Randall"},{"office_reference":"mantenimiento","type_reference":"contratado","name":"Evangeline","lastname":"Terry"},{"office_reference":"contable","type_reference":"pasante","name":"Serina","lastname":"Blanchard"}]
+[
+	{
+		"office_reference": "academica",
+		"type_reference": "planta",
+		"name": "Edward",
+		"lastname": "Small",
+		"dni": "55001626"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "contratado",
+		"name": "Jescie",
+		"lastname": "Cross",
+		"dni": "18832790"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "pasante",
+		"name": "Heidi",
+		"lastname": "Hill",
+		"dni": "04560702"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "planta",
+		"name": "Emerald",
+		"lastname": "Rice",
+		"dni": "90598484"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "pasante",
+		"name": "Hermione",
+		"lastname": "Holden",
+		"dni": "62562130"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "pasante",
+		"name": "Eden",
+		"lastname": "Donaldson",
+		"dni": "02483195"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "planta",
+		"name": "Carissa",
+		"lastname": "Richmond",
+		"dni": "92770196"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "pasante",
+		"name": "Chelsea",
+		"lastname": "Vincent",
+		"dni": "92668907"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "pasante",
+		"name": "Dakota",
+		"lastname": "Jackson",
+		"dni": "24426776"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "contratado",
+		"name": "Tamara",
+		"lastname": "Calderon",
+		"dni": "49833120"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "pasante",
+		"name": "Camille",
+		"lastname": "Best",
+		"dni": "67971390"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "planta",
+		"name": "Wyatt",
+		"lastname": "Walters",
+		"dni": "88221740"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "contratado",
+		"name": "Ira",
+		"lastname": "Cummings",
+		"dni": "63025148"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "contratado",
+		"name": "Harper",
+		"lastname": "Lane",
+		"dni": "70293023"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "planta",
+		"name": "Anika",
+		"lastname": "Cohen",
+		"dni": "20281270"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "planta",
+		"name": "Cullen",
+		"lastname": "Delaney",
+		"dni": "82813805"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "contratado",
+		"name": "Casey",
+		"lastname": "Mercado",
+		"dni": "48917517"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "pasante",
+		"name": "Nolan",
+		"lastname": "Erickson",
+		"dni": "20311967"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "planta",
+		"name": "Adrienne",
+		"lastname": "Armstrong",
+		"dni": "07398244"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "contratado",
+		"name": "Tanisha",
+		"lastname": "Sparks",
+		"dni": "59162146"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "planta",
+		"name": "Madeson",
+		"lastname": "Patel",
+		"dni": "11916125"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "planta",
+		"name": "Ferdinand",
+		"lastname": "Foley",
+		"dni": "79453494"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "pasante",
+		"name": "Amity",
+		"lastname": "Patton",
+		"dni": "77257017"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "planta",
+		"name": "Zachary",
+		"lastname": "Hickman",
+		"dni": "12957493"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "pasante",
+		"name": "Xaviera",
+		"lastname": "Hensley",
+		"dni": "91838151"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "planta",
+		"name": "Amaya",
+		"lastname": "Dale",
+		"dni": "81280975"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "planta",
+		"name": "Lara",
+		"lastname": "Rose",
+		"dni": "42866477"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "pasante",
+		"name": "Ria",
+		"lastname": "Shelton",
+		"dni": "68477029"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "planta",
+		"name": "Marsden",
+		"lastname": "Daugherty",
+		"dni": "90618009"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "pasante",
+		"name": "Ariel",
+		"lastname": "Booth",
+		"dni": "33476609"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "planta",
+		"name": "Ann",
+		"lastname": "Sanders",
+		"dni": "61108416"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "contratado",
+		"name": "Emmanuel",
+		"lastname": "Sanders",
+		"dni": "98564614"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "contratado",
+		"name": "Ivana",
+		"lastname": "Cooke",
+		"dni": "41539740"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "pasante",
+		"name": "Britanney",
+		"lastname": "Hammond",
+		"dni": "19477816"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "contratado",
+		"name": "Angelica",
+		"lastname": "Livingston",
+		"dni": "46199643"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "planta",
+		"name": "Alika",
+		"lastname": "Chan",
+		"dni": "98048635"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "planta",
+		"name": "Preston",
+		"lastname": "Gordon",
+		"dni": "91304130"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "contratado",
+		"name": "Aladdin",
+		"lastname": "Perry",
+		"dni": "19250028"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "pasante",
+		"name": "Francesca",
+		"lastname": "Hawkins",
+		"dni": "61402841"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "pasante",
+		"name": "Branden",
+		"lastname": "Gardner",
+		"dni": "46563495"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "planta",
+		"name": "Kay",
+		"lastname": "Merritt",
+		"dni": "71601130"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "planta",
+		"name": "Kalia",
+		"lastname": "Santiago",
+		"dni": "16982099"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "pasante",
+		"name": "Abra",
+		"lastname": "Ellis",
+		"dni": "04272436"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "contratado",
+		"name": "Larissa",
+		"lastname": "Keller",
+		"dni": "15933145"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "contratado",
+		"name": "Alexandra",
+		"lastname": "Mcneil",
+		"dni": "11284226"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "planta",
+		"name": "Echo",
+		"lastname": "Sims",
+		"dni": "14849389"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "contratado",
+		"name": "Lionel",
+		"lastname": "Sutton",
+		"dni": "40434176"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "planta",
+		"name": "Lester",
+		"lastname": "Joyner",
+		"dni": "17817833"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "planta",
+		"name": "Jasmine",
+		"lastname": "Schneider",
+		"dni": "93824127"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "contratado",
+		"name": "Odysseus",
+		"lastname": "Alston",
+		"dni": "44048031"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "pasante",
+		"name": "Sophia",
+		"lastname": "Ingram",
+		"dni": "38346088"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "pasante",
+		"name": "Quinn",
+		"lastname": "Taylor",
+		"dni": "07402622"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "contratado",
+		"name": "Zane",
+		"lastname": "Lott",
+		"dni": "04733767"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "pasante",
+		"name": "Jamal",
+		"lastname": "Payne",
+		"dni": "77318452"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "planta",
+		"name": "Alan",
+		"lastname": "England",
+		"dni": "88650191"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "contratado",
+		"name": "Laura",
+		"lastname": "Daniels",
+		"dni": "09409561"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "contratado",
+		"name": "Wynne",
+		"lastname": "Atkinson",
+		"dni": "71351636"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "contratado",
+		"name": "Michael",
+		"lastname": "Tyson",
+		"dni": "91864659"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "contratado",
+		"name": "Ingrid",
+		"lastname": "Gallegos",
+		"dni": "73239109"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "pasante",
+		"name": "Kareem",
+		"lastname": "Stark",
+		"dni": "12405405"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "pasante",
+		"name": "Oren",
+		"lastname": "Fletcher",
+		"dni": "81978186"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "pasante",
+		"name": "Iris",
+		"lastname": "Barron",
+		"dni": "87227037"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "contratado",
+		"name": "Hayes",
+		"lastname": "Carrillo",
+		"dni": "22074945"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "contratado",
+		"name": "Skyler",
+		"lastname": "Cobb",
+		"dni": "92725309"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "planta",
+		"name": "Rudyard",
+		"lastname": "Peck",
+		"dni": "54726267"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "contratado",
+		"name": "Tanya",
+		"lastname": "Jenkins",
+		"dni": "39021099"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "planta",
+		"name": "Eleanor",
+		"lastname": "Dodson",
+		"dni": "39400686"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "contratado",
+		"name": "Evelyn",
+		"lastname": "Macias",
+		"dni": "96880036"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "planta",
+		"name": "Amaya",
+		"lastname": "Foster",
+		"dni": "96410429"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "contratado",
+		"name": "Caryn",
+		"lastname": "Roberson",
+		"dni": "63361848"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "contratado",
+		"name": "Shoshana",
+		"lastname": "Skinner",
+		"dni": "65341630"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "pasante",
+		"name": "Jasmine",
+		"lastname": "Perry",
+		"dni": "57254084"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "pasante",
+		"name": "Constance",
+		"lastname": "Holman",
+		"dni": "67944194"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "pasante",
+		"name": "James",
+		"lastname": "Joseph",
+		"dni": "70918265"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "planta",
+		"name": "Darryl",
+		"lastname": "Delaney",
+		"dni": "59130603"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "pasante",
+		"name": "Hasad",
+		"lastname": "Shields",
+		"dni": "04499657"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "contratado",
+		"name": "Lamar",
+		"lastname": "Salinas",
+		"dni": "10874198"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "pasante",
+		"name": "Halee",
+		"lastname": "Yates",
+		"dni": "94759881"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "pasante",
+		"name": "Phillip",
+		"lastname": "Dawson",
+		"dni": "40543138"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "contratado",
+		"name": "Addison",
+		"lastname": "Barnes",
+		"dni": "19265403"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "pasante",
+		"name": "Zahir",
+		"lastname": "Baxter",
+		"dni": "90169237"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "pasante",
+		"name": "Garrett",
+		"lastname": "Pitts",
+		"dni": "51177471"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "contratado",
+		"name": "Aaron",
+		"lastname": "Odom",
+		"dni": "02534228"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "planta",
+		"name": "Dalton",
+		"lastname": "Mueller",
+		"dni": "00536144"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "contratado",
+		"name": "Alisa",
+		"lastname": "Lucas",
+		"dni": "78632326"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "pasante",
+		"name": "Sydney",
+		"lastname": "Conway",
+		"dni": "88378688"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "contratado",
+		"name": "Isabella",
+		"lastname": "Weiss",
+		"dni": "98840377"
+	},
+	{
+		"office_reference": "anatomia",
+		"type_reference": "planta",
+		"name": "Macon",
+		"lastname": "Skinner",
+		"dni": "90894799"
+	},
+	{
+		"office_reference": "informatica",
+		"type_reference": "planta",
+		"name": "Charissa",
+		"lastname": "Cooley",
+		"dni": "24930390"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "pasante",
+		"name": "Sawyer",
+		"lastname": "Navarro",
+		"dni": "50970444"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "planta",
+		"name": "Uriah",
+		"lastname": "Powell",
+		"dni": "11394517"
+	},
+	{
+		"office_reference": "biblioteca",
+		"type_reference": "planta",
+		"name": "Prescott",
+		"lastname": "Young",
+		"dni": "64808238"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "pasante",
+		"name": "Teagan",
+		"lastname": "Massey",
+		"dni": "01350485"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "planta",
+		"name": "Hillary",
+		"lastname": "Diaz",
+		"dni": "72472032"
+	},
+	{
+		"office_reference": "personal",
+		"type_reference": "contratado",
+		"name": "Heidi",
+		"lastname": "Velasquez",
+		"dni": "44980502"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "planta",
+		"name": "Quail",
+		"lastname": "Carney",
+		"dni": "66086201"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "contratado",
+		"name": "Gisela",
+		"lastname": "Stanton",
+		"dni": "74856759"
+	},
+	{
+		"office_reference": "academica",
+		"type_reference": "planta",
+		"name": "Lyle",
+		"lastname": "Morris",
+		"dni": "38011434"
+	},
+	{
+		"office_reference": "mantenimiento",
+		"type_reference": "contratado",
+		"name": "Athena",
+		"lastname": "Gonzalez",
+		"dni": "03172602"
+	},
+	{
+		"office_reference": "contable",
+		"type_reference": "contratado",
+		"name": "Darryl",
+		"lastname": "Cardenas",
+		"dni": "70795040"
+	}
+]

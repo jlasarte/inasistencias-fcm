@@ -330,4 +330,12 @@ class Absence {
         $format = "Ausencia del %s al %s";
         return sprintf($format, $this->getStart()->format('m/d'), $this->getEnd()->format('m/d'));
     }
+
+    public function isMedical() {
+       return (($this->getType()->getName() == "Carpeta Médica"));
+    }
+
+    public function isCompensatory() {
+        return (($this->getType()->getName() == "Compensatorio"));
+    }
 }

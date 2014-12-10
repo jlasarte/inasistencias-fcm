@@ -10,6 +10,9 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Datagrid\ORM\ProxyQuery;
 use Doctrine\ORM\EntityRepository;
+use Sonata\AdminBundle\Exception\ModelManagerException;
+use Medicina\InasistenciasBundle\Exception\CreateValidationException as CreateValidationException;
+
 
 class AbsenceAdmin extends Admin
 {
@@ -32,7 +35,8 @@ class AbsenceAdmin extends Admin
 
         $formMapper
             ->add('employee', 'sonata_type_model', $employee_options)
-            ->add('type', 'sonata_type_model', array('label'=>'Tipo de Ausencia', 'btn_add'=>false))
+            ->add('type', 'sonata_type_model', array('label'=>'Tipo de Ausencia',  'attr' => array('class' => 'absence_type_select'), 'btn_add'=>false))
+            ->add('state','sonata_type_model', array('label'=>'Estado de Ausencia', 'attr' => array('class' => 'absence_state_select'), 'btn_add'=>false))
             ->add('start', 'sonata_type_date_picker', array(
                         'years' => range(1900, $now->format('Y')),
                         'dp_min_date' => '1-1-1900',
@@ -57,6 +61,7 @@ class AbsenceAdmin extends Admin
                     'multiple' => true,
                     'required' => false,
                     'label'=> 'Compensatorios disponibles',
+                    'attr' => array('class' => 'absence_compensatories_select'),
                     'query_builder' => function(EntityRepository $er) use ($parent){
                         return $er->createQueryBuilder('c')
                             ->where('c.absence is NULL')
@@ -70,9 +75,27 @@ class AbsenceAdmin extends Admin
     }
 
     public function postPersist($absence) {
-        foreach ($absence->getCompensatories() as $c) {
-            $c->setAbsence($absence);
-            $this->getModelManager()->update($c);
+        if (($absence->getType()->getName() == "Compensatorio")) {
+            foreach ($absence->getCompensatories() as $c) {
+                $c->setAbsence($absence);
+                $this->getModelManager()->update($c);
+            }
+        }
+
+    }
+
+    public function prePersist($absence) {
+        if (!$absence->isMedical()) {
+            // si no es carpeta medica le nulleamos el estado (nigga nigga)
+            $absence->setState(null);
+        }
+
+        if (($absence->isCompensatory()) and ($absence->getCompensatories()->isEmpty())) {
+            throw new CreateValidationException("No se puede crear una ausencia de tipo compensatorio sin uno, o más, compensatorios que la justifiquen.");
+        } 
+
+        if ($absence->getStart() > $absence->getEnd()) {
+            throw new CreateValidationException("La fecha de inicio de una ausencia no puede ser mayor que su fecha de fin.");
         }
     }
 

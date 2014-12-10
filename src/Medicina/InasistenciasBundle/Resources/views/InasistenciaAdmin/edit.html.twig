@@ -11,6 +11,37 @@ file that was distributed with this source code.
 
 {% extends base_template %}
 
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+
+    $(
+        function() {
+            absence_type_select = $("select.absence_type_select")[0]; //sonata no nos deja setear un ID para el select porque lo usa internamente para no se que carajo
+
+            $(absence_type_select).change(
+                function () {
+                   selected_type = $(this).find(":selected").text();
+
+                    if (selected_type == "Carpeta Médica") {
+                        $(".absence_state_select").closest(".form-group").show();
+                    } else {
+                        $(".absence_state_select").closest(".form-group").hide();
+                    }
+
+                    if (selected_type == "Compensatorio") {
+                        $(".absence_compensatories_select").closest(".form-group").show();
+                    } else {
+                        $(".absence_compensatories_select").closest(".form-group").hide();
+                    }
+                });
+            $(absence_type_select).change();
+            }
+
+        );
+    </script>
+{% endblock %}
+
 {% block title %}
     {% if admin.id(object) is not null %}
         {{ "title_edit"|trans({'%name%': admin.toString(object)|truncate(15) }, 'SonataAdminBundle') }}

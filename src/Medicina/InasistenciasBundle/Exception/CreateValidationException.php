@@ -11,7 +11,7 @@
 
 namespace Medicina\InasistenciasBundle\Exception;
 
-class DeleteValidationException extends \Exception
+class CreateValidationException extends \Exception
 {
 
 }

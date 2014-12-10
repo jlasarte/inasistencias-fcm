@@ -26,7 +26,7 @@ class LoadEmployeeData extends AbstractFixture implements OrderedFixtureInterfac
             $employee_object->setLastName($emplyee['lastname']);
             $employee_object->setOffice($this->getReference($emplyee['office_reference']));
             $employee_object->setType($this->getReference($emplyee['type_reference']));
-
+            $employee_object->setDni($emplyee['dni']);
             $manager->persist($employee_object);
             $manager->flush();
         }

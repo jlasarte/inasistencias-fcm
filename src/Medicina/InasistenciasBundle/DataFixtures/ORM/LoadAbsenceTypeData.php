@@ -6,9 +6,9 @@ use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Acme\HelloBundle\Entity\User;
-use Medicina\InasistenciasBundle\Entity\EmployeeType;
+use Medicina\InasistenciasBundle\Entity\AbsenceType;
 
-class LoadEmployeeTypeData extends AbstractFixture implements OrderedFixtureInterface
+class LoadAbsenceTypeData extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritDoc}
@@ -16,22 +16,20 @@ class LoadEmployeeTypeData extends AbstractFixture implements OrderedFixtureInte
     public function load(ObjectManager $manager)
     {
         
-        $employee_types = array("planta", "contratado", "pasante" );
+        $absence_types = array("Carpeta Médica", "Compensatorio", "Ausente con Aviso", "Licencia Anual" );
 
-        foreach ($employee_types as $type) {
-            $type_object = new EmployeeType();
-            $type_object->setName(ucfirst($type));
+        foreach ($absence_types as $type) {
+            $type_object = new AbsenceType();
+            $type_object->setName($type);
             $manager->persist($type_object);
             $manager->flush();
-
-            $this->addReference($type,$type_object);
         }
         
     }
 
     public function getOrder()
     {
-        return 2;
+        return 4;
     }
 }
 
