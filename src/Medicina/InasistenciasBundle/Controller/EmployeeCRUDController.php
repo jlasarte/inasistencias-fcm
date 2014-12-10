@@ -12,8 +12,11 @@ class EmployeeCRUDController extends Controller
 		foreach ($absences as &$a) {
 			$a["start"] = \Datetime::createFromFormat('Y-m-d', $a["start"]); 
 			$a["end"]   = \Datetime::createFromFormat('Y-m-d', $a["end"]); 
-			
-			$grouped_absences[$a["month"]][] = $a;
+			$a["count"] = 1;
+			if ($a["start"] != $a["end"]) {
+				$a["count"] = $a["start"]->diff($a["end"])->format("%a");
+			}
+			$grouped_absences[$a["month"]][$a["type_id"]][] = $a;
 		}
 		return $grouped_absences;
 	}
@@ -28,7 +31,7 @@ class EmployeeCRUDController extends Controller
 		));
 		
 		$sql = " 
-	        SELECT e.name, e.last_name, at.name, MONTH(a.start) as month, a.start, a.end
+	        SELECT e.name, e.last_name, at.name as type, at.id as type_id, MONTH(a.start) as month, a.start, a.end
 	          FROM employee  e
 	          INNER JOIN absence a ON (e.id = a.employee_id)
 	          INNER JOIN absence_type at on (a.type_id = at.id)
