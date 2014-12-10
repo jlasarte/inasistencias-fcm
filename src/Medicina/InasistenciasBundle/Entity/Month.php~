@@ -1,0 +1,42 @@
+<?php
+namespace Medicina\InasistenciasBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection as ArrayCollection;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="month")
+ */
+class Month
+{
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="integer", name="number", unique=false)
+     */
+    protected $number;
+
+
+     /**
+     * @ORM\OneToMany(targetEntity="MonthWorkableDays", mappedBy="month")
+     */
+    protected $workable_days;
+
+	/**
+     * @ORM\Column(type="integer", name="default_workable_days", unique=false)
+     */
+    protected $default_workable_days;
+
+}

@@ -27,6 +27,27 @@ services:
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
 
+    sonata.admin.month:
+        class: Medicina\InasistenciasBundle\Admin\MonthAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Meses",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\Month
+            - ~
+        calls:
+            - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
+
+    sonata.admin.month_workable_days:
+        class: Medicina\InasistenciasBundle\Admin\MonthWorkableDaysAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Dias Laborables Mensuales",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+        arguments:
+            - ~
+            - Medicina\InasistenciasBundle\Entity\MonthWorkableDays
+            - ~
+        calls:
+            - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
     sonata.admin.employee_type:
         class: Medicina\InasistenciasBundle\Admin\EmployeeTypeAdmin
         tags:
