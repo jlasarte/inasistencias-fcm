@@ -18,7 +18,7 @@ class LoadEmployeeData extends AbstractFixture implements OrderedFixtureInterfac
         
         $string = file_get_contents(realpath(dirname(__FILE__))."/data/employee.json");
         $employee_array = json_decode($string, true);
-
+        $index = 1;
         foreach ($employee_array as $emplyee) {
 
             $employee_object = new Employee();
@@ -28,7 +28,11 @@ class LoadEmployeeData extends AbstractFixture implements OrderedFixtureInterfac
             $employee_object->setType($this->getReference($emplyee['type_reference']));
             $employee_object->setDni($emplyee['dni']);
             $manager->persist($employee_object);
+            if ($index <= 10) {
+                $this->addReference($index,$employee_object);
+            }
             $manager->flush();
+            $index++;
         }
     }
 

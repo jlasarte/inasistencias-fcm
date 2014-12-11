@@ -32,7 +32,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ MedicinaInasistenciasBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -164,7 +164,7 @@ twig:
 knp_snappy:
     pdf:
         enabled:    true
-        binary:     "\"C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe\""        
+        #binary:     "\"C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe\""        
         options:    []
     image:
         enabled:    true

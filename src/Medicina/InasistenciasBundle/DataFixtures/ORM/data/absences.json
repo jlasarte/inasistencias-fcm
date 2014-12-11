@@ -1,0 +1,502 @@
+[
+	{
+		"employee_reference": 10,
+		"type_reference": "compensatorio",
+		"start": "15-04-21"
+	},
+	{
+		"employee_reference": 7,
+		"type_reference": "otra",
+		"start": "15-04-20"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "vacaciones",
+		"start": "14-07-10"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "otra",
+		"start": "15-11-02"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "sin-jus",
+		"start": "15-10-06"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "temprano",
+		"start": "14-09-03"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "suspension",
+		"start": "14-06-26"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "tarde",
+		"start": "15-10-30"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "temprano",
+		"start": "15-08-12"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "temprano",
+		"start": "14-09-29"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "otra",
+		"start": "15-11-09"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "compensatorio",
+		"start": "15-08-08"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "vacaciones",
+		"start": "14-10-21"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "suspension",
+		"start": "15-10-20"
+	},
+	{
+		"employee_reference": 10,
+		"type_reference": "tarde",
+		"start": "15-04-19"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "otra",
+		"start": "14-02-13"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "temprano",
+		"start": "15-02-21"
+	},
+	{
+		"employee_reference": 10,
+		"type_reference": "sin-jus",
+		"start": "15-02-17"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "carpeta",
+		"start": "14-08-30"
+	},
+	{
+		"employee_reference": 7,
+		"type_reference": "carpeta",
+		"start": "14-03-22"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "tarde",
+		"start": "15-01-08"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "tarde",
+		"start": "14-03-20"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "vacaciones",
+		"start": "15-11-15"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "suspension",
+		"start": "15-03-15"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "temprano",
+		"start": "15-07-10"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "carpeta",
+		"start": "14-04-29"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "otra",
+		"start": "14-04-26"
+	},
+	{
+		"employee_reference": 10,
+		"type_reference": "suspension",
+		"start": "15-07-02"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "otra",
+		"start": "15-07-13"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "temprano",
+		"start": "15-07-16"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "temprano",
+		"start": "14-08-06"
+	},
+	{
+		"employee_reference": 10,
+		"type_reference": "sin-jus",
+		"start": "14-07-18"
+	},
+	{
+		"employee_reference": 7,
+		"type_reference": "tarde",
+		"start": "13-12-31"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "vacaciones",
+		"start": "14-09-06"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "compensatorio",
+		"start": "15-04-24"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "suspension",
+		"start": "15-05-12"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "carpeta",
+		"start": "15-05-19"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "temprano",
+		"start": "14-04-13"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "tarde",
+		"start": "15-09-08"
+	},
+	{
+		"employee_reference": 8,
+		"type_reference": "temprano",
+		"start": "15-10-31"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "vacaciones",
+		"start": "13-12-13"
+	},
+	{
+		"employee_reference": 8,
+		"type_reference": "temprano",
+		"start": "14-02-05"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "sin-jus",
+		"start": "15-09-12"
+	},
+	{
+		"employee_reference": 10,
+		"type_reference": "carpeta",
+		"start": "15-10-22"
+	},
+	{
+		"employee_reference": 10,
+		"type_reference": "compensatorio",
+		"start": "15-11-26"
+	},
+	{
+		"employee_reference": 8,
+		"type_reference": "otra",
+		"start": "15-06-25"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "carpeta",
+		"start": "15-10-19"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "tarde",
+		"start": "15-01-26"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "suspension",
+		"start": "14-08-26"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "compensatorio",
+		"start": "14-12-04"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "sin-jus",
+		"start": "15-08-01"
+	},
+	{
+		"employee_reference": 7,
+		"type_reference": "sin-jus",
+		"start": "15-02-09"
+	},
+	{
+		"employee_reference": 8,
+		"type_reference": "compensatorio",
+		"start": "15-07-01"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "carpeta",
+		"start": "15-12-08"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "otra",
+		"start": "15-05-19"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "compensatorio",
+		"start": "14-10-25"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "compensatorio",
+		"start": "14-05-14"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "vacaciones",
+		"start": "14-02-16"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "sin-jus",
+		"start": "14-05-27"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "tarde",
+		"start": "14-05-01"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "suspension",
+		"start": "15-05-30"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "compensatorio",
+		"start": "15-05-03"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "sin-jus",
+		"start": "15-07-19"
+	},
+	{
+		"employee_reference": 7,
+		"type_reference": "suspension",
+		"start": "14-08-23"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "compensatorio",
+		"start": "14-12-31"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "carpeta",
+		"start": "15-04-25"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "temprano",
+		"start": "14-02-20"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "sin-jus",
+		"start": "14-06-06"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "vacaciones",
+		"start": "15-05-11"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "suspension",
+		"start": "15-02-05"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "suspension",
+		"start": "14-07-31"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "vacaciones",
+		"start": "15-10-03"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "sin-jus",
+		"start": "15-11-21"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "vacaciones",
+		"start": "14-02-23"
+	},
+	{
+		"employee_reference": 10,
+		"type_reference": "temprano",
+		"start": "14-03-24"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "carpeta",
+		"start": "14-01-07"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "tarde",
+		"start": "15-02-11"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "sin-jus",
+		"start": "14-12-16"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "compensatorio",
+		"start": "14-09-12"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "carpeta",
+		"start": "14-09-17"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "compensatorio",
+		"start": "14-01-07"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "compensatorio",
+		"start": "15-10-07"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "compensatorio",
+		"start": "14-07-16"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "tarde",
+		"start": "15-08-01"
+	},
+	{
+		"employee_reference": 7,
+		"type_reference": "vacaciones",
+		"start": "15-01-08"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "suspension",
+		"start": "15-04-13"
+	},
+	{
+		"employee_reference": 6,
+		"type_reference": "compensatorio",
+		"start": "15-02-01"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "sin-jus",
+		"start": "15-11-13"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "vacaciones",
+		"start": "14-11-10"
+	},
+	{
+		"employee_reference": 2,
+		"type_reference": "otra",
+		"start": "15-11-12"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "suspension",
+		"start": "14-06-18"
+	},
+	{
+		"employee_reference": 3,
+		"type_reference": "suspension",
+		"start": "14-06-23"
+	},
+	{
+		"employee_reference": 5,
+		"type_reference": "compensatorio",
+		"start": "14-01-24"
+	},
+	{
+		"employee_reference": 4,
+		"type_reference": "carpeta",
+		"start": "15-08-15"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "compensatorio",
+		"start": "15-06-16"
+	},
+	{
+		"employee_reference": 7,
+		"type_reference": "vacaciones",
+		"start": "14-09-03"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "otra",
+		"start": "15-11-23"
+	},
+	{
+		"employee_reference": 1,
+		"type_reference": "carpeta",
+		"start": "14-12-16"
+	},
+	{
+		"employee_reference": 9,
+		"type_reference": "otra",
+		"start": "15-10-15"
+	},
+	{
+		"employee_reference": 8,
+		"type_reference": "temprano",
+		"start": "14-06-02"
+	}
+]

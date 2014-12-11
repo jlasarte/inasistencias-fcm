@@ -1,9 +1,17 @@
 <html>
 	<head>
 		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
 		<style type="text/css">
+			.report-table {
+				border-collapse: collapse;
+			}
+
 			tr th, tr td {
 				border: 1px solid black;
+				padding: 5px;
 			}
 			.table-container {
 				margin-top: 5%;
@@ -17,7 +25,9 @@
 
 	<body>
 		<div>
-			LOGO MEDICINA
+			{% image '@MedicinaInasistenciasBundle/Resources/public/images/facultad.jpg' %}
+			    <img src="{{ app.request.getSchemeAndHttpHost() ~ asset_url }}" alt="Example" />
+			{% endimage %}
 		</div>
 		<div class="employee-name">
 			APELLIDO Y NOMBRES: {{ employee.fullname }}
@@ -26,7 +36,7 @@
 			<table class="report-table">
 				<thead>
 					<tr>
-						<th rowspan="2" colspan="2">Año</th>
+						<th rowspan="2" colspan="2">A&ntilde;o</th>
 						<th colspan="2">Inasistencias</th>
 						<th colspan="2" rowspan="2">Suspensi&oacute;n</th>
 						<th colspan="2">Sanidad</th>
@@ -35,7 +45,7 @@
 						<th colspan="2">Otras Licencias</th>
 						<th colspan="2" rowspan="2" >Candidad de Compensaciones</th>
 						<th colspan="2" rowspan="2" >Vacaciones Anuales</th>
-						<th colspan="2" rowspan="2">Total de d&iacute;as que debío cumplir</th>
+						<th colspan="2" rowspan="2">Total de d&iacute;as que deb&iacute;o cumplir</th>
 						<th colspan="2" rowspan="2">Total de d&iacute;as trabajados</th>
 						<th colspan="2" rowspan="2">Observaciones</th>
 					</tr>
@@ -53,226 +63,27 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td colspan="2">Enero</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Febrero</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Marzo</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Abril</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Mayo</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Junio</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Julio</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Agosto</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Septiembre</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Octubre</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Noviembre</td>
-						<td></td>
-						<td></td>
-						<td ></td>
-						<td colspan="2"></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-						<td colspan="2"></td>
-					</tr>
+					{% for month in months %}
+					    <tr>
+					    	<td colspan="2">{{month.name}}</td>
+					    	<td>{{absences[month.number]["Inasistencia Justificada"]["total"]}}</td>
+							<td>{{absences[month.number]["Inasistencia sin Justificar"]["total"]}}</td>
+							<td colspan="2">{{absences[month.number]["Suspension"]["total"]}}</td>
+							<td>{{absences[month.number]["Sanidad"]["times"]}}</td> <!--sanidad -->
+							<td>{{absences[month.number]["Sanidad"]["total"]}}</td> <!--sanidad -->
+							<td>{{absences[month.number]["Salida Temprano"]["times"]}}</td> <!-- temprano veces -->
+							<td>{{absences[month.number]["Salida Temprano"]["total"]}}</td>
+							<td>{{absences[month.number]["Llegada Tarde"]["times"]}}</td>
+							<td>{{absences[month.number]["Llegada Tarde"]["total"]}}</td>
+							<td>{{absences[month.number]["Otra Licencia"]["with_pay"]}}</td>
+							<td>{{absences[month.number]["Otra Licencia"]["without_pay"]}}</td>
+							<td colspan="2">{{absences[month.number]["Compensatorio"]["total"]}}</td>
+							<td colspan="2">{{absences[month.number]["Vacaciones Anuales"]["total"]}}</td>
+							<td colspan="2">{{month.workable_days}}</td>
+							<td colspan="2">{{month.workable_days - absences[month.number]["total"]}}</td>
+							<td colspan="2"></td>
+					    </tr>
+					{% endfor %}					
 				</tbody>
 			</table>
 		</div>
