@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+		<style type="text/css">
+			.report-table {
+				border-collapse: collapse;
+			}
+
+			tr th, tr td {
+				border: 1px solid black;
+				padding: 5px;
+			}
+			.table-container {
+				margin-top: 5%;
+			}
+
+			.employee-name {
+				text-align: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			{% image '@MedicinaInasistenciasBundle/Resources/public/images/facultad.jpg' %}
+			    <img src="{{ app.request.getSchemeAndHttpHost() ~ asset_url }}" alt="Example" />
+			{% endimage %}
+		</div>
+		<div class="employee-name">
+			{{ office.name }}
+		</div>
+		<div class="table-container">
+			<table class="report-table">
+				<thead>
+					<tr>
+						<th rowspan="2" colspan="2">A&ntilde;o</th>
+						<th colspan="2">Inasistencias</th>
+						<th colspan="2" rowspan="2">Suspensi&oacute;n</th>
+						<th colspan="2">Sanidad</th>
+						<th colspan="2">Salidas Temprano</th>
+						<th colspan="2">Llegadas Tarde</th>
+						<th colspan="2">Otras Licencias</th>
+						<th colspan="2" rowspan="2" >Candidad de Compensaciones</th>
+						<th colspan="2" rowspan="2" >Vacaciones Anuales</th>
+						<th colspan="2" rowspan="2">Total de d&iacute;as que deb&iacute;o cumplir</th>
+						<th colspan="2" rowspan="2">Total de d&iacute;as trabajados</th>
+						<th colspan="2" rowspan="2">Observaciones</th>
+					</tr>
+					<tr>
+						<th>Justificadas</th>
+						<th>Injustificadas</th>
+						<th>Veces</th>
+						<th>Total</th>
+						<th>Veces</th>
+						<th>Total</th>
+						<th>Veces</th>
+						<th>Total</th>
+						<th>Con Sueldo</th>
+						<th>Sin Sueldo</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for employee in absences %}
+					    <tr>
+					    	<td colspan="2">{{employee["employee_name"] ~ " " ~ employee["employee_last_name"]}}</td>
+					    	<td>{{employee["Inasistencia Justificada"]["total"]}}</td>
+							<td>{{employee["Inasistencia sin Justificar"]["total"]}}</td>
+							<td colspan="2">{{employee["Suspension"]["total"]}}</td>
+							<td>{{employee["Sanidad"]["times"]}}</td> <!--sanidad -->
+							<td>{{employee["Sanidad"]["total"]}}</td> <!--sanidad -->
+							<td>{{employee["Salida Temprano"]["times"]}}</td> <!-- temprano veces -->
+							<td>{{employee["Salida Temprano"]["total"]}}</td>
+							<td>{{employee["Llegada Tarde"]["times"]}}</td>
+							<td>{{employee["Llegada Tarde"]["total"]}}</td>
+							<td>{{employee["Otra Licencia"]["with_pay"]}}</td>
+							<td>{{employee["Otra Licencia"]["without_pay"]}}</td>
+							<td colspan="2">{{employee["Compensatorio"]["total"]}}</td>
+							<td colspan="2">{{employee["Vacaciones Anuales"]["total"]}}</td>
+							<td colspan="2">{{workable_days}}</td>
+							<td colspan="2">{{workable_days - employee["total"]}}</td>
+							<td colspan="2"></td>
+					    </tr>
+					{% endfor %}					
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

@@ -8,9 +8,16 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
+use Medicina\InasistenciasBundle\Exception\DeleteValidationException as DeleteValidationException;
 
 class OfficeAdmin extends Admin
 {
+    protected function configureRoutes(RouteCollection $collection) 
+    {
+        $collection->add('report', $this->getRouterIdParameter().'/report');
+    }
+
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
@@ -42,6 +49,19 @@ class OfficeAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('name', null, array('label'=>'Nombre'))
+            ->add('_action', 'actions', array(
+                'actions' => array(
+                    'Reporte de Ausencias'=>array(
+                        'template'=>
+                        'MedicinaInasistenciasBundle:CRUD:list__action_report_office.html.twig')
+                )
+            ))
         ;
+    }
+
+    public function preRemove($object) {
+        if (!$object->getEmployees()->isEmpty()) {
+            throw new DeleteValidationException("No se puede eliminar una oficina que continene usuarios asignados. <br/> Pruebe primero borrando los empleados correspondiente");
+        }  
     }
 }

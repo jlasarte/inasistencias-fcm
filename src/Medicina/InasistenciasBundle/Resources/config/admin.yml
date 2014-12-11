@@ -23,7 +23,7 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Office
-            - ~
+            - MedicinaInasistenciasBundle:OfficeCRUD
         calls:
             - [ setTranslationDomain, [MedicinaInasistenciasBundle]]
 
@@ -88,7 +88,7 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\CompensatoryPart
-            - MedicinaInasistenciasBundle:CompensatoryCRUD
+            - MedicinaInasistenciasBundle:DeleteValidationCRUD
         calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
     

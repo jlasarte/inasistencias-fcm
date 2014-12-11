@@ -6,7 +6,7 @@ use Sonata\AdminBundle\Controller\CRUDController as Controller;
 use Symfony\Component\HttpFoundation\Response as Response;
 use Medicina\InasistenciasBundle\Exception\DeleteValidationException as DeleteValidationException;
 
-class CompensatoryCRUDController extends Controller
+class DeleteValidationCRUDController extends Controller
 {
     
     /**

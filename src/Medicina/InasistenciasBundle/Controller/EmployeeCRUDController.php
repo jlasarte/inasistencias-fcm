@@ -56,7 +56,20 @@ class EmployeeCRUDController extends Controller
 		return $final_table_array;
 	}
 
-    public function reportAction($id) {
+
+	public function monthlyReportAction($id, $month){
+		return $this->report($id, $month);
+	}
+
+	public function yearlyreportAction($id) {
+		return $this->report($id);
+	}
+
+	public function reportAction($id) {
+		$html = $this->renderView('MedicinaInasistenciasBundle:Reports:choose.html.twig');
+		return new Response($html);
+	}
+    private function report($id, $month = null) {
 
     	$id     = $this->get('request')->get($this->admin->getIdParameter());
         $employee = $this->admin->getObject($id);
@@ -79,9 +92,11 @@ class EmployeeCRUDController extends Controller
 	        	COALESCE(mwd.workable_days, m.default_workable_days) as workable_days
 	          FROM month  m 
 	          left join month_workable_days mwd on (m.id = mwd.month_id)
-	          where mwd.year = YEAR(NOW()) or mwd.year is null
+	          where (mwd.year = YEAR(NOW()) or mwd.year is null) 
+	          and (m.number = :month or :month is null)
 	    	";
 	    $stmt_m = $this->admin->getmodelManager()->getEntityManager($employee)->getConnection()->prepare($sql_m);
+	   	$stmt_m->bindValue('month', $month);
 	    $stmt_m->execute();
     	
     	$months = $stmt_m->fetchAll();
