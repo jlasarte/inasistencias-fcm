@@ -100,8 +100,7 @@ services:
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Compensatory
-            - MedicinaInasistenciasBundle:CompensatoryCRUD
-        calls:
+            - MedicinaInasistenciasBundle:DeleteValidationCRUD
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
 
     sonata.admin.absence:
