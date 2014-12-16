@@ -199,4 +199,8 @@ class Compensatory {
     public function getUsedtojustify(){
         return ($this->getAbsence() != null);
     }
+
+    public function __toString() {
+        return "Compensatorio";
+    }
 }

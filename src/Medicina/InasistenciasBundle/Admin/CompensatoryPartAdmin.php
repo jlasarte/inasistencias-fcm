@@ -32,6 +32,7 @@ class CompensatoryPartAdmin extends Admin
                         'years' => range(1900, $now->format('Y')),
                         'dp_min_date' => '1-1-1900',
                         'dp_max_date' => $now->format('c'),
+                        'dp_language'=> 'es',
                         'required' => false,
                         'label'=> 'Fecha'
                     ))

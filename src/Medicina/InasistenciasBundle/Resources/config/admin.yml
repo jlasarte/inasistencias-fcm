@@ -91,7 +91,6 @@ services:
             - MedicinaInasistenciasBundle:DeleteValidationCRUD
         calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
-    
 
     sonata.admin.compensatory:
         class: Medicina\InasistenciasBundle\Admin\CompensatoryAdmin
@@ -101,6 +100,7 @@ services:
             - ~
             - Medicina\InasistenciasBundle\Entity\Compensatory
             - MedicinaInasistenciasBundle:DeleteValidationCRUD
+        calls:
             - [setTranslationDomain, [MedicinaInasistenciasBundle]]
 
     sonata.admin.absence:

@@ -40,6 +40,7 @@ class CompensatoryAdmin extends Admin
                         'years' => range(1900, $now->format('Y')),
                         'dp_min_date' => '1-1-1900',
                         'dp_max_date' => $now->format('c'),
+                        'dp_language' => 'es',
                         'required' => false,
                         'label'=> 'Fecha Creación'
                     ))
@@ -118,7 +119,7 @@ class CompensatoryAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('created', null, array('label'=>'Compensatorio creado el'))
+            ->addIdentifier('created', null)
             ->addIdentifier('usedtojustify', 'boolean', array('label'=>'Utilizado para justificar una inasistencia?'))
         ;
     }
