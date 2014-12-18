@@ -30,10 +30,7 @@
 			{% endimage %}
 		</div>
 		<div class="employee-name">
-			<h3>{{ office.name }}</h3>
-			{% if month %}
-				mes de {{month.name}}
-			{% endif %}
+			{{ office.name }}
 		</div>
 		<div class="table-container">
 			<table class="report-table">
@@ -48,7 +45,7 @@
 						<th colspan="2">Otras Licencias</th>
 						<th colspan="2" rowspan="2" >Candidad de Compensaciones</th>
 						<th colspan="2" rowspan="2" >Vacaciones Anuales</th>
-						<th colspan="2" rowspan="2">Total de d&iacute;as que deb&iacute;o cumplir</th>
+						<th colspan="2" rowspan="2">Total de d&iacute;as que se deb&iacute;o cumplir</th>
 						<th colspan="2" rowspan="2">Total de d&iacute;as trabajados</th>
 						<th colspan="2" rowspan="2">Observaciones</th>
 					</tr>
@@ -66,24 +63,24 @@
 					</tr>
 				</thead>
 				<tbody>
-					{% for employee in absences %}
+					{% for month in months %}
 					    <tr>
-					    	<td colspan="2">{{employee["employee_name"] ~ " " ~ employee["employee_last_name"]}}</td>
-					    	<td>{{employee["Inasistencia Justificada"]["total"]}}</td>
-							<td>{{employee["Inasistencia sin Justificar"]["total"]}}</td>
-							<td colspan="2">{{employee["Suspension"]["total"]}}</td>
-							<td>{{employee["Sanidad"]["times"]}}</td> <!--sanidad -->
-							<td>{{employee["Sanidad"]["total"]}}</td> <!--sanidad -->
-							<td>{{employee["Salida Temprano"]["times"]}}</td> <!-- temprano veces -->
-							<td>{{employee["Salida Temprano"]["total"]}}</td>
-							<td>{{employee["Llegada Tarde"]["times"]}}</td>
-							<td>{{employee["Llegada Tarde"]["total"]}}</td>
-							<td>{{employee["Otra Licencia"]["with_pay"]}}</td>
-							<td>{{employee["Otra Licencia"]["without_pay"]}}</td>
-							<td colspan="2">{{employee["Compensatorio"]["total"]}}</td>
-							<td colspan="2">{{employee["Vacaciones Anuales"]["total"]}}</td>
-							<td colspan="2">{{workable_days}}</td>
-							<td colspan="2">{{workable_days - employee["total"]}}</td>
+					    	<td colspan="2">{{month.name}}</td>
+					    	<td>{{absences[month.number]["Inasistencia Justificada"]["total"]}}</td>
+							<td>{{absences[month.number]["Inasistencia sin Justificar"]["total"]}}</td>
+							<td colspan="2">{{absences[month.number]["Suspension"]["total"]}}</td>
+							<td>{{absences[month.number]["Sanidad"]["times"]}}</td> <!--sanidad -->
+							<td>{{absences[month.number]["Sanidad"]["total"]}}</td> <!--sanidad -->
+							<td>{{absences[month.number]["Salida Temprano"]["times"]}}</td> <!-- temprano veces -->
+							<td>{{absences[month.number]["Salida Temprano"]["total"]}}</td>
+							<td>{{absences[month.number]["Llegada Tarde"]["times"]}}</td>
+							<td>{{absences[month.number]["Llegada Tarde"]["total"]}}</td>
+							<td>{{absences[month.number]["Otra Licencia"]["with_pay"]}}</td>
+							<td>{{absences[month.number]["Otra Licencia"]["without_pay"]}}</td>
+							<td colspan="2">{{absences[month.number]["Compensatorio"]["total"]}}</td>
+							<td colspan="2">{{absences[month.number]["Vacaciones Anuales"]["total"]}}</td>
+							<td colspan="2">{{month.workable_days}}</td>
+							<td colspan="2">{{month.workable_days - absences[month.number]["total"]}}</td>
 							<td colspan="2"></td>
 					    </tr>
 					{% endfor %}					

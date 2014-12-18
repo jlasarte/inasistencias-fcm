@@ -10,7 +10,7 @@ file that was distributed with this source code.
 #}
 
 {% if admin.isGranted('VIEW', object) %}
-    <a href="{{ path('admin_medicina_inasistencias_employee_yearly_report', {'id': object.id}) }}" class="btn btn-sm btn-default view_link" title="{{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}">
-        Generar Reporte
+    <a href="{{ path('admin_medicina_inasistencias_office_monthly_employee_report', {'id': object.id}) }}" class="btn btn-sm btn-default view_link" title="{{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}">
+        Generar Reporte por Mes
     </a>
 {% endif %}

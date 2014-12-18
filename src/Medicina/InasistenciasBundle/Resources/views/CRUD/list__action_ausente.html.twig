@@ -9,7 +9,7 @@ file that was distributed with this source code.
 
 #}
 
-{% if admin.isGranted('MASTER', object) %}
+{% if admin.isGranted('VIEW', object) %}
     <a href="{{ path('admin_medicina_inasistencias_employee_absence_list', {'id': object.id}) }}" class="btn btn-sm btn-default view_link" title="{{ 'action_create_by_user'|trans({}, 'SonataAdminBundle') }}">
         Ausentes
     </a>

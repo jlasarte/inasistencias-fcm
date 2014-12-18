@@ -16,6 +16,8 @@ class OfficeAdmin extends Admin
     protected function configureRoutes(RouteCollection $collection) 
     {
         $collection->add('report', $this->getRouterIdParameter().'/report');
+        $collection->add('monthly_report', $this->getRouterIdParameter().'/montlhyreport');
+        $collection->add('monthly_employee_report', $this->getRouterIdParameter().'/montlhy-employee-report');
     }
 
     // Fields to be shown on create/edit forms
@@ -53,7 +55,13 @@ class OfficeAdmin extends Admin
                 'actions' => array(
                     'Reporte de Ausencias'=>array(
                         'template'=>
-                        'MedicinaInasistenciasBundle:CRUD:list__action_report_office.html.twig')
+                        'MedicinaInasistenciasBundle:CRUD:list__action_report_office.html.twig'),
+                    'Reporte de Ausencias de un Mes, por Empleado'=>array(
+                        'template'=>
+                        'MedicinaInasistenciasBundle:CRUD:list__action_report_office_monthly_employee.html.twig'),
+                    'Reporte de Ausencias por Mes'=>array(
+                        'template'=>
+                        'MedicinaInasistenciasBundle:CRUD:list__action_report_office_monthly.html.twig')
                 )
             ))
         ;

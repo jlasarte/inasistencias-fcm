@@ -84,7 +84,7 @@ services:
     sonata.admin.compensatory_part:
         class: Medicina\InasistenciasBundle\Admin\CompensatoryPartAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Módulos de Tiempo",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Módulos de Tiempo",label_translator_strategy: "sonata.admin.label.strategy.underscore", show_in_dashboard: false }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\CompensatoryPart
@@ -95,7 +95,7 @@ services:
     sonata.admin.compensatory:
         class: Medicina\InasistenciasBundle\Admin\CompensatoryAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Compensatorios",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Compensatorios", label_translator_strategy: "sonata.admin.label.strategy.underscore", show_in_dashboard: false }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Compensatory
@@ -106,7 +106,7 @@ services:
     sonata.admin.absence:
         class: Medicina\InasistenciasBundle\Admin\AbsenceAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Ausencias",label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+            - { name: sonata.admin, manager_type: orm, group: "Contenido", label: "Ausencias",label_translator_strategy: "sonata.admin.label.strategy.underscore", show_in_dashboard: false }
         arguments:
             - ~
             - Medicina\InasistenciasBundle\Entity\Absence

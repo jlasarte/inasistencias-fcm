@@ -4,6 +4,7 @@ namespace Medicina\InasistenciasBundle\Controller;
 
 use Sonata\AdminBundle\Controller\CRUDController as Controller;
 use Symfony\Component\HttpFoundation\Response as Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class EmployeeCRUDController extends Controller
 {
@@ -122,4 +123,6 @@ class EmployeeCRUDController extends Controller
 		    )
 		);
     }
+
+ 
 }
